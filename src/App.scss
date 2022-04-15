@@ -19,7 +19,7 @@
   --yellow: #edf770;
 }
 
-@mixin boxMain($color) {
+@mixin boxMain($color, $bg) {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -27,6 +27,7 @@
   margin: 0.5rem;
   border: 3.5px solid $color;
   border-radius: 1rem;
+  background-color: $bg;
 }
 
 .body {

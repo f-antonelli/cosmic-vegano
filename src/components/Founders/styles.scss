@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 .container-founders {
-  @include boxMain(var(--pink));
+  @include boxMain(var(--pink), var(--light-green));
   .text-founders {
     text-align: center;
     font-weight: 500;

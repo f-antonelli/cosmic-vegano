@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Founders from './components/Founders'
 import './App.scss'
+import VeganInfo from './components/VeganInfo'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="body">
         <Banner />
         <Founders />
+        <VeganInfo />
       </div>
     </div>
   )

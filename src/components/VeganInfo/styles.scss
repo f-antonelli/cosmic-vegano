@@ -1,0 +1,34 @@
+@import "../../App.scss";
+
+.container-veganinfo {
+  @include boxMain(var(--dark-green), var(--yellow));
+  color: var(--dark-green);
+  .title-veganinfo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+  }
+  .boxlist-vegainfo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    list-style: none;
+    font-size: .7rem;
+    li{
+      display: flex;
+      padding-bottom: 0.3rem;
+    }
+    span{
+      padding-right: 0.5rem;
+    }
+  }
+  h4 {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+}
