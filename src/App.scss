@@ -8,8 +8,8 @@
 }
 
 :root{
-  --black: #000000;
-  --white: #FFFFFF;
+  --black: #0f0f0f;
+  --white: #f0f0f0;
   --red: #D33B23;
   --pink: #FF96B7;
   --dark-green: #004739;
@@ -17,4 +17,8 @@
   --blue: #058CCE;
   --light-blue: #AFD1ED;
   --yellow: #EDF770;
+}
+
+body {
+  background-color: var(--light-green);
 }
