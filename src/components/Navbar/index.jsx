@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.jpg'
 import back from '../../assets/back.svg'
 import hamburger from '../../assets/hamburger.svg'
 import './styles.scss'
