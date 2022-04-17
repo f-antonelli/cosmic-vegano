@@ -30,6 +30,14 @@
   background-color: $bg;
 }
 
+@mixin pattern404($w, $h, $bg) {
+  position: absolute;
+  background-color: $bg;
+  border-radius: 50%;
+  width: $w;
+  height: $h;
+}
+
 .body {
   background-color: var(--light-green);
   overflow: hidden;

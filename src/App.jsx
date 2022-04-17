@@ -6,17 +6,19 @@ import Founders from './components/Founders'
 import './App.scss'
 import VeganInfo from './components/VeganInfo'
 import AboutUs from './components/AboutUs'
+import PageNotFound from './components/PageNotFound'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="body">
-        <Banner />
+      {/* <Navbar /> */}
+      {/* <div className="body"> */}
+      {/* <Banner />
         <Founders />
         <VeganInfo />
-        <AboutUs />
-      </div>
+        <AboutUs /> */}
+      <PageNotFound />
+      {/* </div> */}
     </>
   )
 }

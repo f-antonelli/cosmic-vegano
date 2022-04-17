@@ -1,0 +1,58 @@
+@import "../../App.scss";
+
+.container-404 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  overflow: hidden;
+  .p1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .p2 {
+    margin-bottom: 5rem;
+    font-weight: 300;
+  }
+  .button-404 {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 70%;
+    font-size: 1.4rem;
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+  .pattern-bl {
+    @include pattern404(14rem, 14rem, var(--light-green));
+    bottom: -6rem;
+    left: -6rem;
+  }
+  .pattern-tl {
+    @include pattern404(14rem, 14rem, var(--light-green));
+    top: -3.5rem;
+    left: -12rem;
+  }
+  .pattern-tr {
+    @include pattern404(14rem, 12rem, var(--white));
+    top: -5.5rem;
+    right: -5.5rem;
+    opacity: 0.1;
+    transform: rotate(-45deg);
+  }
+  .pattern-c {
+    @include pattern404(9rem, 9rem, var(--light-green));
+    top: 9rem;
+    bottom: 0;
+    right: -6rem;
+    margin: auto;
+  }
+}
