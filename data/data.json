@@ -1,0 +1,174 @@
+{
+	"categorias": [
+		{
+			"id": 1,
+			"nombre": "empanadas",
+			"img": "empanadas.jpg"
+		},
+		{
+			"id": 2,
+			"nombre": "tartas",
+			"img": "null.jpg"
+		},
+		{
+			"id": 3,
+			"nombre": "milanesas",
+			"img": "mila-de-seitan.jpg"
+		},
+		{
+			"id": 4,
+			"nombre": "medallones",
+			"img": "medallon-garbanzo"
+		},
+		{
+			"id": 5,
+			"nombre": "parrilla",
+			"img": "parrilla.jpg"
+		},
+		{
+			"id": 6,
+			"nombre": "almuerzo",
+			"img": "catering.jpg"
+		}
+	],
+	"productos":[
+		{
+			"id":1,
+			"nombre":"Seitán",
+			"categoria": 3,
+			"img": "mila-de-seitan.jpg",
+			"coccion": "Horno",
+			"conservacion": "3 dias a -5 grados",
+			"ingredientes": "Garbanzos, gluten puro de trigo, harina de garbanzos, pan rallado, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "500g",
+					"rinde": "2-3",
+					"precio": 100,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "1kg",
+					"rinde": "4-6",
+					"precio": 190,
+					"link": "https//mp2.com"
+				}
+			]
+		},
+		{
+			"id":2,
+			"nombre":"Garbanzo",
+			"categoria": 4,
+			"img": "medallon-garbanzo.jpg",
+			"coccion": "Horno",
+			"conservacion": "5 dias",
+			"ingredientes": "Garbanzos, ajo, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "6u",
+					"rinde": "3",
+					"precio": 66,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "12u",
+					"rinde": "6",
+					"precio": 80,
+					"link": "https//mp2.com"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"nombre":"Batata y remolacha",
+			"categoria": 4,
+			"img": "medallon-remolacha.jpg",
+			"coccion": "Horno",
+			"conservacion": "5 dias",
+			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "6u",
+					"rinde": "3",
+					"precio": 67,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "12u",
+					"rinde": "6",
+					"precio": 81,
+					"link": "https//mp2.com"
+				}
+			]
+		},
+		{
+			"id":4,
+			"nombre":"Garbanzo v2",
+			"categoria": 4,
+			"img": "medallon-garbanzo.jpg",
+			"coccion": "Horno",
+			"conservacion": "5 dias",
+			"ingredientes": "Garbanzos, ajo, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "6u",
+					"rinde": "3",
+					"precio": 68,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "12u",
+					"rinde": "6",
+					"precio": 84,
+					"link": "https//mp2.com"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"nombre":"Batata y remolacha v2",
+			"categoria": 4,
+			"img": "medallon-remolacha.jpg",
+			"coccion": "Horno",
+			"conservacion": "5 dias",
+			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "6u",
+					"rinde": "3",
+					"precio": 68,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "12u",
+					"rinde": "6",
+					"precio": 84,
+					"link": "https//mp2.com"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"nombre":"Batata y remolacha v3",
+			"categoria": 4,
+			"img": "medallon-remolacha.jpg",
+			"coccion": "Horno",
+			"conservacion": "5 dias",
+			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "6u",
+					"rinde": "3",
+					"precio": 80,
+					"link": "https//mp.com"
+				},
+				{
+					"cantidad": "12u",
+					"rinde": "6",
+					"precio": 135,
+					"link": "https//mp2.com"
+				}
+			]
+		}
+	]
+}
