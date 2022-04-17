@@ -32,4 +32,12 @@
 
 .body {
   background-color: var(--light-green);
+  overflow: hidden;
+}
+
+.divider{
+  background-image: url('../../assets/home/divider.png');
+  width: 100vw;
+  height: 5vh;
+  margin: 0.5rem 0;
 }

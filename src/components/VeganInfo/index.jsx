@@ -22,23 +22,30 @@ const INGREDIENTS = [
 
 const VeganInfo = () => {
   return (
-    <div className="container-veganinfo">
-      <div className="title-veganinfo">
-        <img alt="cow" src={cow} />
-        <h4>Un producto No es es vegano si en la lista de ingrediente un producto CONTIENE</h4>
+    <>
+      <div className="divider" />
+      <div className="container-veganinfo">
+        <div className="title-veganinfo">
+          <img alt="cow" src={cow} />
+          <h4>Un producto No es es vegano si en la lista de ingrediente un producto CONTIENE</h4>
+        </div>
+
+        <ul className="boxlist-vegainfo">
+          {INGREDIENTS.map((ingredient, index) => (
+            <li key={index}>
+              <span>- </span>
+              <p>{ingredient}</p>
+            </li>
+          ))}
+        </ul>
+
+        <h4>
+          Si dice ¨PUEDE CONTENER¨, es vegano, son trazas y se aclaran para personas alérgicas
+        </h4>
       </div>
 
-      <ul className="boxlist-vegainfo">
-        {INGREDIENTS.map((ingredient, index) => (
-          <li key={index}>
-            <span>- </span>
-            <p>{ingredient}</p>
-          </li>
-        ))}
-      </ul>
-
-      <h4>Si dice ¨PUEDE CONTENER¨, es vegano, son trazas y se aclaran para personas alérgicas</h4>
-    </div>
+      <div className="divider" />
+    </>
   )
 }
 

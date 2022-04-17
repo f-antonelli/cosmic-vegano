@@ -5,17 +5,19 @@ import Banner from './components/Banner'
 import Founders from './components/Founders'
 import './App.scss'
 import VeganInfo from './components/VeganInfo'
+import AboutUs from './components/AboutUs'
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="body">
         <Banner />
         <Founders />
         <VeganInfo />
+        <AboutUs />
       </div>
-    </div>
+    </>
   )
 }
 
