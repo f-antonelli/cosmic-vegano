@@ -6,6 +6,7 @@ import Banner from '../../components/Banner'
 import Founders from '../../components/Founders'
 import VeganInfo from '../../components/VeganInfo'
 import Location from '../../components/Location'
+import ContactUs from '../../components/ContactUs'
 
 import '../../App.scss'
 
@@ -18,6 +19,7 @@ const Home = () => {
       <VeganInfo />
       <AboutUs />
       <Location />
+      <ContactUs />
     </div>
   )
 }
