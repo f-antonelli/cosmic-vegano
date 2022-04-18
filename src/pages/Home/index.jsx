@@ -5,6 +5,8 @@ import Navbar from '../../components/Navbar'
 import Banner from '../../components/Banner'
 import Founders from '../../components/Founders'
 import VeganInfo from '../../components/VeganInfo'
+import Location from '../../components/Location'
+
 import '../../App.scss'
 
 const Home = () => {
@@ -15,6 +17,7 @@ const Home = () => {
       <Founders />
       <VeganInfo />
       <AboutUs />
+      <Location />
     </div>
   )
 }

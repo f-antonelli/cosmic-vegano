@@ -1,0 +1,25 @@
+@import "../../App.scss";
+
+section.location {
+    @include boxMain(transparent, transparent);
+    border: 0;
+    padding: 0;
+
+    .title-location {
+        font-size: 20px;
+        margin: .8rem 0;
+    }
+
+    iframe {
+        @include boxMain(var(--pink), transparent);
+        margin: 0;
+        padding: 0;
+        height: 432px;
+        width: 100%;
+    }
+
+    .text-location {
+        color: var(--white);
+        margin: .8rem 0;
+    }
+}
