@@ -5,6 +5,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardHeader from '@mui/material/CardHeader'
 import CardMedia from '@mui/material/CardMedia'
+
 import './styles.scss'
 
 const MediaCard = ({ categoria, nombre, img, variantes }) => (

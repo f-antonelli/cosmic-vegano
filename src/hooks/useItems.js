@@ -1,55 +1,39 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 import ProductsContext from '../context/ProductsContext'
 
 const useItems = () => {
   const { products, setProducts, categories, setCategories } = useContext(ProductsContext)
+  const [cosmicArray, setCosmicArray] = useState([])
 
   const find = (array, key, value) => array.find((element) => element[key] === value)
   const filter = (array, key, value) => array.filter((element) => element[key] === value)
 
-  const getItemsToShow = (show, itemsType) => {
-    let itemsToShow = null
-    const category = find(categories, 'nombre', show)
-
-    switch (itemsType) {
+  const setCosmicArrayToUse = (arrayName) => {
+    switch (arrayName) {
       case 'combos':
-        //itemsToShow = filter(combos, 'categoria', category.id)
+        setCosmicArray(combos)
         break
-      case 'categoria':
-        itemsToShow = filter(products, 'categoria', category.id)
+      case 'products':
+        setCosmicArray(products)
         break
     }
+  }
 
-    /* OPCION 2 */
-    //const combosToShow = filter(combos, 'categoria', category.id)
-    //const productsToShow = filter(products, 'categoria', category.id)
+  const getItemsToShow = (showName) => {
+    const category = find(categories, 'nombre', showName)
+    const itemsToShow = filter(products, 'categoria', category.id)
 
-    // JOIN const itemsToShow = combosToShow + productsToShow
     const categoryName = category.nombre
 
     return { itemsToShow, categoryName }
   }
 
-  const getItemToShow = (show, itemType) => {
-    let itemToShow = null
+  const getItemToShow = (showID) => {
+    let itemToShow = filter(cosmicArray, 'id', showID)
+    const categoria = find(categories, 'id', itemToShow.categoria)
 
-    switch (itemType) {
-      case 'combo':
-        //itemToShow = filter(combos, 'id', show)
-        break
-      case 'producto':
-        itemToShow = filter(products, 'id', show)
-        break
-    }
-
-    /* OPCION 2 */
-    //const combosToShow = filter(combos, 'id', show)
-    //const productsToShow = filter(products, 'id', show)
-
-    // JOIN const itemsToShow = combosToShow + productsToShow
-
-    itemToShow.categoria = find(categories, 'id', itemToShow.categoria)
+    itemToShow.categoria = categoria.nombre
 
     return itemToShow
   }
@@ -59,6 +43,9 @@ const useItems = () => {
     setProducts,
     categories,
     setCategories,
+    cosmicArray,
+    setCosmicArray,
+    setCosmicArrayToUse,
     getItemToShow,
     getItemsToShow,
   }

@@ -1,22 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
-import { Swiper, SwiperSlide } from 'swiper/react' // Import Swiper React components
-import { Keyboard } from 'swiper' // import required modules
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Keyboard } from 'swiper'
+import { useParams, useMatch } from 'react-router-dom'
 
 import MediaCard from '../MediaCard'
 import useItems from '../../hooks/useItems'
 
-/* Import Swiper styles */
 import 'swiper/css'
 import 'swiper/css/pagination'
 //import 'swiper/css/navigation'
 import './styles.scss'
 
-function Carousel({ show, itemsType }) {
-  const carouselName = `carousel-${show}`
-  const { getItemsToShow } = useItems()
+const Carousel = () => {
+  const { getItemsToShow, setCosmicArrayToUse } = useItems()
+  let { show } = useParams()
 
-  const { itemsToShow, categoryName } = getItemsToShow(show, itemsType)
+  show = show ? show : 'medallones' // Debe ser 'promos', solo a efectos de prueba es 'medallones'
+
+  const carouselName = `carousel-${show}`
+
+  const isHomeRoute = useMatch('/')
+  const isCategoryRoute = useMatch('/categoria/:show')
+  const isCombosRoute = useMatch('/combos/:show')
+
+  if (isHomeRoute) setCosmicArrayToUse('products') // Debe ser 'combos', solo a efectos de prueba es 'products'
+  if (isCategoryRoute) setCosmicArrayToUse('products')
+  if (isCombosRoute) setCosmicArrayToUse('combos')
+
+  // ↓↓↓↓↓↓ PROBLEMA ↓↓↓↓↓↓
+  const [itemsToShow, setItemsToShow] = useState([])
+  const [categoryName, setCategoryName] = useState('')
+
+  useEffect(() => {
+    const { itemsToShow, categoryName } = getItemsToShow(show)
+
+    setItemsToShow(itemsToShow)
+    setCategoryName(categoryName)
+    /*
+      NOTA:
+      En el return se hace un map de itemsToShow, y dentro se usa categoryName
+    */
+  }, [getItemsToShow, show])
+  // ↑↑↑↑↑↑ PROBLEMA ↑↑↑↑↑↑
 
   return (
     <>
@@ -33,11 +59,12 @@ function Carousel({ show, itemsType }) {
           slidesPerView={'auto'}
           spaceBetween={24}
         >
-          {itemsToShow.map((item, index) => (
-            <SwiperSlide key={index}>
-              <MediaCard {...item} categoria={categoryName} />
-            </SwiperSlide>
-          ))}
+          {itemsToShow.length > 0 &&
+            itemsToShow.map((item, index) => (
+              <SwiperSlide key={index}>
+                <MediaCard {...item} categoria={categoryName} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </Box>
     </>
