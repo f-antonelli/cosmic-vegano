@@ -1,33 +1,26 @@
 import React from 'react'
 import Box from '@mui/material/Box'
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
-// import required modules
-import { Keyboard } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react' // Import Swiper React components
+import { Keyboard } from 'swiper' // import required modules
 
 import MediaCard from '../MediaCard'
+import useItems from '../../hooks/useItems'
 
-// Import Swiper styles
+/* Import Swiper styles */
 import 'swiper/css'
 import 'swiper/css/pagination'
 //import 'swiper/css/navigation'
 import './styles.scss'
 
-const getCategory = (categories, categoryName) =>
-  categories.find((element) => element.nombre === categoryName)
-
-const getItemsToShow = (items, categoryID) =>
-  items.filter((element) => element.categoria === categoryID)
-
-function Carousel({ categories, items, show }) {
+function Carousel({ show, itemsType }) {
   const carouselName = `carousel-${show}`
+  const { getItemsToShow } = useItems()
 
-  const category = getCategory(categories, show)
-  const itemsToShow = getItemsToShow(items, category.id)
+  const { itemsToShow, categoryName } = getItemsToShow(show, itemsType)
 
   return (
     <>
-      <Box className={carouselName} component="section" sx={{ mt: 5 }}>
+      <Box className={carouselName} component="section" sx={{ mt: 3 }}>
         <Swiper
           className="my-swiper"
           keyboard={{
@@ -40,9 +33,9 @@ function Carousel({ categories, items, show }) {
           slidesPerView={'auto'}
           spaceBetween={24}
         >
-          {itemsToShow.map((item) => (
-            <SwiperSlide key={item.id}>
-              <MediaCard {...item} categoria={category.nombre} />
+          {itemsToShow.map((item, index) => (
+            <SwiperSlide key={index}>
+              <MediaCard {...item} categoria={categoryName} />
             </SwiperSlide>
           ))}
         </Swiper>
