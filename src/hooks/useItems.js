@@ -22,7 +22,7 @@ const useItems = () => {
 
   const getItemsToShow = (showName) => {
     const category = find(categories, 'nombre', showName)
-    const itemsToShow = filter(products, 'categoria', category.id)
+    const itemsToShow = filter(cosmicArray, 'categoria', category.id)
 
     const categoryName = category.nombre
 
