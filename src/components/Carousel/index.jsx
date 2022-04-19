@@ -14,7 +14,7 @@ import './styles.scss'
 
 const Carousel = () => {
   const { getItemsToShow, setCosmicArrayToUse } = useItems()
-  let { show } = useParams()
+  let { show = 'combos' } = useParams()
 
   show = show ? show : 'medallones' // Debe ser 'promos', solo a efectos de prueba es 'medallones'
 

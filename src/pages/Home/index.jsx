@@ -8,7 +8,7 @@ import Founders from '../../components/Founders'
 import VeganInfo from '../../components/VeganInfo'
 import Location from '../../components/Location'
 import ContactUs from '../../components/ContactUs'
-
+import Carouselv2 from '../../components/Carouselv2'
 import '../../App.scss'
 
 const Home = () => {
@@ -19,6 +19,7 @@ const Home = () => {
       <Founders />
       <VeganInfo />
       {/* <Carousel /> */}
+      <Carouselv2 />
       <AboutUs />
       <Location />
       <ContactUs />

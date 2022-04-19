@@ -12,7 +12,7 @@ const useItems = () => {
   const setCosmicArrayToUse = (arrayName) => {
     switch (arrayName) {
       case 'combos':
-        setCosmicArray(combos)
+        // setCosmicArray(combos)   Si el useState es de tipo array, solo debe recibir array
         break
       case 'products':
         setCosmicArray(products)

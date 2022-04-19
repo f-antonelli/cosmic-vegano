@@ -14,9 +14,10 @@ const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<Home />} path="/" />
+        <Route element={<Home />} path="/:show" />
         {/* <Route element={<Category />} path="/categoria/:show" />
         <Route element={<Combos />} path="/combos/:show" /> */}
-        {/* <Route element={<Product />} path="/producto/:showID" />
+        {/* <Route element={<Product />} path="/producto/:show" />
         <Route element={<Combo />} path="/combo/:showID" /> */}
         {/* <Route element={<Veganized />} path="/veganizado/producto/:showID/:variant" />
         <Route element={<Veganized />} path="/veganizado/combo/:showID/" /> */}
