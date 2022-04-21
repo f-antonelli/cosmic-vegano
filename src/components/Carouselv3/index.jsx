@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Keyboard } from 'swiper'
 import Box from '@mui/material/Box'
-import { useLocation, useParams } from 'react-router-dom'
 
 import MediaCard from '../MediaCard'
 import useItemsv3 from '../../hooks/useItemsv3'
@@ -23,7 +23,7 @@ const Carouselv3 = ({ title = 'Promos' }) => {
   }, [getItemsToShow, show, pathname])
 
   const carouselClasses = `carousel carousel-${show}`
-  const carouselTitle = title ? <h2 className="title-carousel">{title}</h2> : null
+  const carouselTitle = title && <h2 className="title-carousel">{title}</h2>
 
   return (
     <Box className={carouselClasses} component="section">

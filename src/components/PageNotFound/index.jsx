@@ -12,12 +12,14 @@ const PageNotFound = () => {
       <div className="pattern-c" />
       <div className="pattern-bl" />
 
-      <img alt="not-found-img" src={notfound} />
-      <p className="p1">Oh No!</p>
-      <p className="p2">Algo salio mal!!!</p>
-      <Link className="button-404" to="/">
-        Volver a la homepage
-      </Link>
+      <div className="content-404">
+        <img alt="not-found-img" src={notfound} />
+        <p className="p1">Oh No!</p>
+        <p className="p2">Algo salio mal!!!</p>
+        <Link className="button-404" to="/">
+          Volver a la homepage
+        </Link>
+      </div>
     </div>
   )
 }

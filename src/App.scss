@@ -30,7 +30,7 @@
   background-color: $bg;
 }
 
-@mixin pattern404($w, $h, $bg) {
+@mixin patternSpeck($w, $h, $bg) {
   position: absolute;
   background-color: $bg;
   border-radius: 50%;

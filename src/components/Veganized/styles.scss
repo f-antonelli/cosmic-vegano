@@ -1,13 +1,13 @@
 @import "../../App.scss";
 
-.container-404 {
+.container-veganized {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: var(--dark-green);
+  background-color: var(--light-green);
   color: var(--white);
   overflow: hidden;
-  .content-404 {
+  .content-veganized {
     width: inherit;
     height: inherit;
     display: flex;
@@ -15,25 +15,25 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+    row-gap: 1.2rem;
 
     .p1 {
       font-size: 2.5rem;
       font-weight: 500;
-      margin-bottom: 1.2rem;
       z-index: inherit;
     }
     .p2 {
-      margin-bottom: 5rem;
+      margin-bottom: .8rem;
       font-weight: 300;
       z-index: inherit;
     }
-    .button-404 {
+    .button-veganized {
       cursor: pointer;
       text-decoration: none;
       text-align: center;
       width: 70%;
       font-size: 1.4rem;
-      background-color: var(--pink);
+      background-color: var(--dark-green);
       color: var(--white);
       padding: 0.6rem 0.8rem;
       border-radius: 0.5rem;
@@ -41,12 +41,12 @@
     }
   }
   .pattern-bl {
-    @include patternSpeck(14rem, 14rem, var(--light-green));
+    @include patternSpeck(14rem, 14rem, var(--pink));
     bottom: -6rem;
     left: -6rem;
   }
   .pattern-tl {
-    @include patternSpeck(14rem, 14rem, var(--light-green));
+    @include patternSpeck(14rem, 14rem, var(--pink));
     top: -3.5rem;
     left: -12rem;
   }
@@ -58,7 +58,7 @@
     transform: rotate(-45deg);
   }
   .pattern-c {
-    @include patternSpeck(9rem, 9rem, var(--light-green));
+    @include patternSpeck(9rem, 9rem, var(--pink));
     top: 9rem;
     bottom: 0;
     right: -6rem;

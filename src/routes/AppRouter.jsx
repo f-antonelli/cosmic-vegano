@@ -7,7 +7,7 @@ import NotFound from '../pages/NotFound'
 import Combos from '../pages/Combos' */
 /* import Product from '../pages/Product'
 import Combo from '../pages/Combo' */
-/* import Veganized from '../pages/Veganized' */
+import Thanks from '../pages/Thanks'
 
 const AppRouter = () => {
   return (
@@ -19,8 +19,8 @@ const AppRouter = () => {
         <Route element={<Combos />} path="/combos/:show" /> */}
         {/* <Route element={<Product />} path="/producto/:show" />
         <Route element={<Combo />} path="/combo/:showID" /> */}
-        {/* <Route element={<Veganized />} path="/veganizado/producto/:showID/:variant" />
-        <Route element={<Veganized />} path="/veganizado/combo/:showID/" /> */}
+        <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />
+        <Route element={<Thanks />} path="/veganizado/combo/:showID/" />
         <Route element={<NotFound />} path="*" />
       </Routes>
     </BrowserRouter>
