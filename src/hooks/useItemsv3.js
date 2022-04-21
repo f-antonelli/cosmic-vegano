@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import ProductsContext from '../context/ProductsContext'
 
 const useItemsv3 = () => {
-  const { products, categories } = useContext(ProductsContext)
+  const { products, categories, dataLoaded } = useContext(ProductsContext)
   const [carouselItems, setCarouselItems] = useState([])
   const [item, setItem] = useState(null)
   const [category, setCategory] = useState(null)
@@ -28,7 +28,7 @@ const useItemsv3 = () => {
   const getItemsToShow = (showName, pathName) => {
     let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
 
-    let dataLoaded = products.length > 0 && categories.length > 0
+    //let dataLoaded = products.length > 0 && categories.length > 0
 
     if (dataLoaded && prevPathName !== pathName && prevShow != showName) {
       setPrevPathName(pathName)
@@ -48,7 +48,9 @@ const useItemsv3 = () => {
   const getItemToShow = (showID, pathName) => {
     let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
 
-    let dataLoaded = products.length > 0 && categories.length > 0
+    showID = Number(showID)
+
+    //let dataLoaded = products.length > 0 && categories.length > 0
 
     if (dataLoaded && prevPathName !== pathName && prevShow != showID) {
       setPrevPathName(pathName)
