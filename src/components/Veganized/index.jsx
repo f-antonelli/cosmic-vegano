@@ -6,13 +6,17 @@ import useItemsv3 from '../../hooks/useItemsv3'
 
 import './styles.scss'
 
-const useGetPath = (pathName, depth = 1) => {
-  pathName = pathName.slice(1)
-  pathName = pathName.split('/', depth)
-  pathName = pathName.join('/')
-  pathName = `/${pathName}`
+const usePath = () => {
+  const getPath = (pathName, depth = 1) => {
+    pathName = pathName.slice(1)
+    pathName = pathName.split('/', depth)
+    pathName = pathName.join('/')
+    pathName = `/${pathName}`
 
-  return pathName
+    return pathName
+  }
+
+  return { getPath }
 }
 
 const Veganized = () => {
@@ -20,11 +24,13 @@ const Veganized = () => {
   // path="/veganizado/combo/:showID/"
   const { showID, variant } = useParams()
   let { pathname } = useLocation()
-
-  // Quitando params:
-  pathname = useGetPath(pathname, 2)
+  const { getPath } = usePath()
 
   const { item, getItemToShow } = useItemsv3()
+
+  // Quitando params:
+  pathname = getPath(pathname, 2)
+  console.log('PATHNAME: ', pathname)
 
   useEffect(() => {
     getItemToShow(showID, pathname)
@@ -42,7 +48,6 @@ const Veganized = () => {
       <div className="content-veganized">
         <img alt="Vaca feliz por haber elegido productos veganos" src={happymuu} />
         <p className="p1">Gracias por su compra !!!</p>
-
         {item && (
           <p className="p2">
             Ha comprado: {item.nombre} {variantInfo}
