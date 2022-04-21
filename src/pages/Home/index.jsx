@@ -8,6 +8,7 @@ import Founders from '../../components/Founders'
 import VeganInfo from '../../components/VeganInfo'
 import Location from '../../components/Location'
 import ContactUs from '../../components/ContactUs'
+import Footer from '../../components/Footer'
 import Carouselv3 from '../../components/Carouselv3'
 import '../../App.scss'
 
@@ -23,6 +24,7 @@ const Home = () => {
       <AboutUs />
       <Location />
       <ContactUs />
+      <Footer />
     </div>
   )
 }
