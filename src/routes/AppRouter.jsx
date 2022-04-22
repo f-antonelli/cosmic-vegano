@@ -3,10 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-/* import Category from '../pages/Category'
-import Combos from '../pages/Combos' */
-/* import Product from '../pages/Product'
-import Combo from '../pages/Combo' */
+/* import CategoryDetails from '../pages/CategoryDetails' */ // -----> COMPONENT=Presenter
+/* import ProductDetails from '../pages/ProductDetails' */ // -----> COMPONENT=Product
+/* import ComboDetails from '../pages/ComboDetails' */ // -----> COMPONENT=Combo
 import Thanks from '../pages/Thanks'
 
 const AppRouter = () => {
@@ -15,12 +14,12 @@ const AppRouter = () => {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Home />} path="/:show" />
-        {/* <Route element={<Category />} path="/categoria/:show" />
-        <Route element={<Combos />} path="/combos/:show" /> */}
-        {/* <Route element={<Product />} path="/producto/:show" />
-        <Route element={<Combo />} path="/combo/:showID" /> */}
+        {/* <Route element={<CategoryDetails />} path="/categoria/:show" />
+        <Route element={<CategoryDetails />} path="/combos/:show" /> */}
+        {/* <Route element={<ProductDetails />} path="/producto/:showID" />
+        <Route element={<ComboDetails />} path="/combo/:showID" /> */}
         <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />
-        <Route element={<Thanks />} path="/veganizado/combo/:showID/" />
+        <Route element={<Thanks />} path="/veganizado/combo/:showID" />
         <Route element={<NotFound />} path="*" />
       </Routes>
     </BrowserRouter>
