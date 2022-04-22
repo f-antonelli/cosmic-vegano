@@ -20,7 +20,7 @@ const Home = () => {
       <Founders />
       <VeganInfo />
       {/* <Carousel /> */}
-      <Carouselv3 />
+      <Carouselv3 title="promos" />
       <AboutUs />
       <Location />
       <ContactUs />

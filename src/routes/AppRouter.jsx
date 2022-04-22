@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-/* import CategoryDetails from '../pages/CategoryDetails' */ // -----> COMPONENT=Presenter
+import CategoryDetails from '../pages/CategoryDetails' // -----> COMPONENT=Presenter
 /* import ProductDetails from '../pages/ProductDetails' */ // -----> COMPONENT=Product
 /* import ComboDetails from '../pages/ComboDetails' */ // -----> COMPONENT=Combo
 import Thanks from '../pages/Thanks'
@@ -13,9 +13,8 @@ const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<Home />} path="/" />
-        <Route element={<Home />} path="/:show" />
-        {/* <Route element={<CategoryDetails />} path="/categoria/:show" />
-        <Route element={<CategoryDetails />} path="/combos/:show" /> */}
+        <Route element={<CategoryDetails />} path="/categoria/:show" />
+        <Route element={<CategoryDetails />} path="/combos/:show" />
         {/* <Route element={<ProductDetails />} path="/producto/:showID" />
         <Route element={<ComboDetails />} path="/combo/:showID" /> */}
         <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />

@@ -6,17 +6,20 @@ import Box from '@mui/material/Box'
 
 import MediaCard from '../MediaCard'
 import useItemsv3 from '../../hooks/useItemsv3'
+import usePath from '../../hooks/usePath'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 //import 'swiper/css/navigation'
 import './styles.scss'
 
-const Carouselv3 = ({ title = 'Promos' }) => {
+const Carouselv3 = ({ title }) => {
   const { show = 'medallones' } = useParams()
-  const { pathname } = useLocation()
-
+  let { pathname } = useLocation()
+  const { getPath } = usePath()
   const { carouselItems, category, getItemsToShow } = useItemsv3()
+
+  pathname = getPath(pathname)
 
   useEffect(() => {
     getItemsToShow(show, pathname)

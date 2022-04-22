@@ -25,12 +25,20 @@ const useItemsv3 = () => {
     return { useCombosArray, useProductsArray }
   }
 
+  const getCategoryToShow = (showName) => {
+    if (dataLoaded) {
+      let categoryToShow = find(categories, 'nombre', showName)
+
+      setCategory(categoryToShow)
+    }
+  }
+
   const getItemsToShow = (showName, pathName) => {
     let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
 
     //let dataLoaded = products.length > 0 && categories.length > 0
 
-    if (dataLoaded && prevPathName !== pathName && prevShow != showName) {
+    if (dataLoaded && (prevPathName !== pathName || prevShow != showName)) {
       setPrevPathName(pathName)
       setPrevShow(showName)
 
@@ -46,13 +54,12 @@ const useItemsv3 = () => {
   }
 
   const getItemToShow = (showID, pathName) => {
-    let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
-
     showID = Number(showID)
+    let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
 
     //let dataLoaded = products.length > 0 && categories.length > 0
 
-    if (dataLoaded && prevPathName !== pathName && prevShow != showID) {
+    if (dataLoaded && (prevPathName !== pathName || prevShow != showID)) {
       setPrevPathName(pathName)
       setPrevShow(showID)
 
@@ -69,7 +76,7 @@ const useItemsv3 = () => {
     }
   }
 
-  return { carouselItems, category, item, getItemToShow, getItemsToShow }
+  return { carouselItems, category, item, getCategoryToShow, getItemToShow, getItemsToShow }
 }
 
 export default useItemsv3
