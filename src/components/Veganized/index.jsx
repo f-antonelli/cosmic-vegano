@@ -3,40 +3,26 @@ import { useLocation, useParams } from 'react-router-dom'
 
 import happymuu from '../../assets/thanks/happymuu.png'
 import useItemsv3 from '../../hooks/useItemsv3'
+import usePath from '../../hooks/usePath'
 
 import './styles.scss'
 
-const usePath = () => {
-  const getPath = (pathName, depth = 1) => {
-    pathName = pathName.slice(1)
-    pathName = pathName.split('/', depth)
-    pathName = pathName.join('/')
-    pathName = `/${pathName}`
-
-    return pathName
-  }
-
-  return { getPath }
-}
-
+// path="/veganizado/producto/:showID/:variant"
+// path="/veganizado/combo/:showID/"
 const Veganized = () => {
-  // path="/veganizado/producto/:showID/:variant"
-  // path="/veganizado/combo/:showID/"
   const { showID, variant } = useParams()
   let { pathname } = useLocation()
-  const { getPath } = usePath()
 
+  const { getPath } = usePath()
   const { item, getItemToShow } = useItemsv3()
 
-  // Quitando params:
   pathname = getPath(pathname, 2)
-  console.log('PATHNAME: ', pathname)
 
   useEffect(() => {
     getItemToShow(showID, pathname)
   }, [getItemToShow, showID, pathname])
 
-  const variantInfo = variant && `de ${variant}`
+  const variantInfo = variant && `de ${variant}.`
 
   return (
     <div className="container-veganized">
