@@ -28,11 +28,11 @@ const Veganized = () => {
   const itemInfo = item && (
     <ul className="list-veganized">
       <li>
-        <span>{item.tipo}</span>: {item.nombre}
+        <span>{capitalize(item.tipo)}</span>: {capitalize(item.nombre)}
         {variantInfo}.
       </li>
       <li>
-        <span>Categoría</span>: {item.categoria}.
+        <span>Categoría</span>: {capitalize(item.categoria)}.
       </li>
     </ul>
   )
@@ -41,7 +41,9 @@ const Veganized = () => {
     item &&
     `https://wa.me/543625140121?text=Hola%21%20compr%C3%A9%20el%20${item.tipo.toUpperCase()}%20%22${capitalize(
       item.nombre.toLowerCase(),
-    )}%22.%20Mi%20usuario%20de%20MP%20es:%20`
+    )}%22%20de%20la%20categor%C3%ADa%3A%20%22${capitalize(
+      item.categoria.toLowerCase(),
+    )}%22.%20Mi%20usuario%20de%20MP%20es%3A%20`
 
   return (
     <div className="container-veganized">
