@@ -54,19 +54,20 @@ const useItemsv3 = () => {
   }
 
   const getItemToShow = (showID, pathName) => {
-    showID = Number(showID)
     let { useCombosArray, useProductsArray } = getCosmicArrayToUse(pathName)
+
+    showID = Number(showID)
 
     //let dataLoaded = products.length > 0 && categories.length > 0
 
-    if (dataLoaded && (prevPathName !== pathName || prevShow != showID)) {
+    if (dataLoaded && (prevPathName !== pathName || prevShow != Number(showID))) {
       setPrevPathName(pathName)
       setPrevShow(showID)
 
       let itemToShow = null
 
-      useProductsArray && (itemToShow = filter(products, 'id', showID))
-      useCombosArray && (itemToShow = filter(combos, 'id', showID))
+      useProductsArray && (itemToShow = find(products, 'id', showID))
+      useCombosArray && (itemToShow = find(combos, 'id', showID))
 
       let categoryToShow = find(categories, 'id', itemToShow.categoria)
 
