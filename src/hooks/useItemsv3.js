@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import ProductsContext from '../context/ProductsContext'
 
 const useItemsv3 = () => {
-  const { products, categories, dataLoaded } = useContext(ProductsContext)
+  const { products, categories, combos, dataLoaded } = useContext(ProductsContext)
   const [carouselItems, setCarouselItems] = useState([])
   const [item, setItem] = useState(null)
   const [category, setCategory] = useState(null)
@@ -16,8 +16,8 @@ const useItemsv3 = () => {
   const some = (array, value) => array.some((element) => element === value)
 
   const getCosmicArrayToUse = (pathName) => {
-    const pathsThatUseProducts = ['/', '/categoria', '/producto', '/veganizado/producto']
-    const pathsThatUseCombos = ['/combos', '/combo', '/veganizado/combo']
+    const pathsThatUseProducts = ['/categoria', '/producto', '/veganizado/producto']
+    const pathsThatUseCombos = ['/', '/combos', '/combo', '/veganizado/combo']
 
     let useCombosArray = some(pathsThatUseCombos, pathName)
     let useProductsArray = some(pathsThatUseProducts, pathName)
@@ -60,7 +60,7 @@ const useItemsv3 = () => {
 
     //let dataLoaded = products.length > 0 && categories.length > 0
 
-    if (dataLoaded && (prevPathName !== pathName || prevShow != Number(showID))) {
+    if (dataLoaded && (prevPathName !== pathName || prevShow != showID)) {
       setPrevPathName(pathName)
       setPrevShow(showID)
 
@@ -72,6 +72,7 @@ const useItemsv3 = () => {
       let categoryToShow = find(categories, 'id', itemToShow.categoria)
 
       itemToShow.categoria = categoryToShow.nombre
+      itemToShow.tipo = categoryToShow.tipo
 
       setItem(itemToShow)
     }

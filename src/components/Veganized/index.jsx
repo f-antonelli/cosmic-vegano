@@ -4,6 +4,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import happymuu from '../../assets/thanks/happymuu.png'
 import useItemsv3 from '../../hooks/useItemsv3'
 import usePath from '../../hooks/usePath'
+import useUtilities from '../../hooks/useUtilities'
 
 import './styles.scss'
 
@@ -14,6 +15,7 @@ const Veganized = () => {
   let { pathname } = useLocation()
   const { getPath } = usePath()
   const { item, getItemToShow } = useItemsv3()
+  const { capitalize } = useUtilities()
 
   pathname = getPath(pathname, 2)
 
@@ -21,13 +23,25 @@ const Veganized = () => {
     getItemToShow(showID, pathname)
   }, [getItemToShow, showID, pathname])
 
-  const variantInfo = variant && `de ${variant}.`
+  const variantInfo = variant && ` por ${variant}`
 
   const itemInfo = item && (
-    <p className="p2">
-      Ha comprado: {item.nombre} {variantInfo}
-    </p>
+    <ul className="list-veganized">
+      <li>
+        <span>{item.tipo}</span>: {item.nombre}
+        {variantInfo}.
+      </li>
+      <li>
+        <span>Categoría</span>: {item.categoria}.
+      </li>
+    </ul>
   )
+
+  const wapp =
+    item &&
+    `https://wa.me/543625140121?text=Hola%21%20compr%C3%A9%20el%20${item.tipo.toUpperCase()}%20%22${capitalize(
+      item.nombre.toLowerCase(),
+    )}%22.%20Mi%20usuario%20de%20MP%20es:%20`
 
   return (
     <div className="container-veganized">
@@ -42,7 +56,7 @@ const Veganized = () => {
         {itemInfo}
 
         <p className="p2">Por favor, contactanos para coordinar la entrega:</p>
-        <a className="button-veganized" href="/">
+        <a className="button-veganized" href={wapp} rel="noreferrer" target="_blank">
           Contactanos
         </a>
       </div>

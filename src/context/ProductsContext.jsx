@@ -6,12 +6,14 @@ const ProductsContext = createContext({})
 
 const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([])
+  const [combos, setCombos] = useState([])
   const [categories, setCategories] = useState([])
   const [dataLoaded, setDataLoaded] = useState(false)
 
   useEffect(() => {
     getProducts().then((data) => {
       setProducts(data.productos)
+      setCombos(data.combos)
       setCategories(data.categorias)
       setDataLoaded(true)
     })
@@ -19,7 +21,16 @@ const ProductsProvider = ({ children }) => {
 
   return (
     <ProductsContext.Provider
-      value={{ products, setProducts, categories, setCategories, dataLoaded, setDataLoaded }}
+      value={{
+        products,
+        setProducts,
+        combos,
+        setCombos,
+        categories,
+        setCategories,
+        dataLoaded,
+        setDataLoaded,
+      }}
     >
       {children}
     </ProductsContext.Provider>

@@ -17,15 +17,28 @@
     z-index: 1;
     row-gap: 1.2rem;
 
+    & > * {
+      z-index: inherit;
+    }
     .p1 {
       font-size: 2.5rem;
       font-weight: 500;
-      z-index: inherit;
+    }
+    .list-veganized {
+      li {
+        font-size: 20px;
+        margin-bottom: .5rem;
+        span {
+          font-weight: bold;
+          text-decoration: underline;
+          text-transform: capitalize;
+        }
+      }
     }
     .p2 {
+      font-size: 16px;
       margin-bottom: .8rem;
       font-weight: 300;
-      z-index: inherit;
     }
     .button-veganized {
       cursor: pointer;
@@ -37,7 +50,6 @@
       color: var(--white);
       padding: 0.6rem 0.8rem;
       border-radius: 0.5rem;
-      z-index: inherit;
     }
   }
   .pattern-bl {

@@ -14,7 +14,7 @@ import 'swiper/css/pagination'
 import './styles.scss'
 
 const Carouselv3 = ({ title }) => {
-  const { show = 'medallones' } = useParams()
+  const { show = 'promos' } = useParams()
   let { pathname } = useLocation()
   const { getPath } = usePath()
   const { carouselItems, category, getItemsToShow } = useItemsv3()
@@ -47,7 +47,7 @@ const Carouselv3 = ({ title }) => {
         {carouselItems.length > 0 &&
           carouselItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <MediaCard {...item} categoria={category.nombre} />
+              <MediaCard {...item} categoria={category.nombre} tipo={category.tipo} />
             </SwiperSlide>
           ))}
       </Swiper>
