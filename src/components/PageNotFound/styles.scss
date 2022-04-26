@@ -16,16 +16,17 @@
     align-items: center;
     z-index: 1;
 
+    & > * {
+      z-index: inherit;
+    }
     .p1 {
       font-size: 2.5rem;
       font-weight: 500;
       margin-bottom: 1.2rem;
-      z-index: inherit;
     }
     .p2 {
       margin-bottom: 5rem;
       font-weight: 300;
-      z-index: inherit;
     }
     .button-404 {
       cursor: pointer;
@@ -37,7 +38,6 @@
       color: var(--white);
       padding: 0.6rem 0.8rem;
       border-radius: 0.5rem;
-      z-index: inherit;
     }
   }
   .pattern-bl {

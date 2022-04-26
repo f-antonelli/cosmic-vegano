@@ -1,5 +1,23 @@
-.my-swiper {
+@import "../../App.scss";
+
+section.carousel {
+  @include boxMain(transparent, transparent);
+  border: 0;
+  margin: .8rem initial;
+  padding: 0;
+  
+  .title-carousel {
+    font-size: 24px;
+    margin: .8rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .my-swiper {
+    margin: 0;
+    
     .swiper-slide {
         max-width: 255px;
     }
+  }
 }

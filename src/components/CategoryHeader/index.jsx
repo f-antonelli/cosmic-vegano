@@ -3,17 +3,13 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import back from '../../assets/back.svg'
-import useItemsv3 from '../../hooks/useItemsv3'
+import useItems from '../../hooks/useItems'
 
 import './styles.scss'
 
-// path="/categoria/:show"
-// path="/combos/:show"
 const CategoryHeader = () => {
   const { show } = useParams()
-  /* let { pathname } = useLocation()
-  const { getPath } = usePath() */
-  const { category, getCategoryToShow } = useItemsv3()
+  const { category, getCategoryToShow } = useItems()
 
   useEffect(() => {
     getCategoryToShow(show)

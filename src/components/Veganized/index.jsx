@@ -2,19 +2,17 @@ import React, { useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 
 import happymuu from '../../assets/thanks/happymuu.png'
-import useItemsv3 from '../../hooks/useItemsv3'
+import useItems from '../../hooks/useItems'
 import usePath from '../../hooks/usePath'
 import useUtilities from '../../hooks/useUtilities'
 
 import './styles.scss'
 
-// path="/veganizado/producto/:showID/:variant"
-// path="/veganizado/combo/:showID/"
 const Veganized = () => {
   const { showID, variant } = useParams()
   let { pathname } = useLocation()
   const { getPath } = usePath()
-  const { item, getItemToShow } = useItemsv3()
+  const { item, getItemToShow } = useItems()
   const { capitalize } = useUtilities()
 
   pathname = getPath(pathname, 2)
