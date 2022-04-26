@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Keyboard } from 'swiper'
 import Box from '@mui/material/Box'
 
-import MediaCard from '../MediaCard'
+import MySwiper from '../MySwiper'
 import useItems from '../../hooks/useItems'
 import usePath from '../../hooks/usePath'
 
-import 'swiper/css'
-import 'swiper/css/pagination'
 import './styles.scss'
 
 const Carousel = ({ title }) => {
@@ -31,25 +27,11 @@ const Carousel = ({ title }) => {
     <Box className={carouselClasses} component="section">
       {carouselTitle}
 
-      <Swiper
-        className="my-swiper"
-        keyboard={{
-          enabled: true,
-        }}
-        modules={[Keyboard]}
-        pagination={{
-          clickable: true,
-        }}
-        slidesPerView={'auto'}
-        spaceBetween={24}
-      >
-        {carouselItems.length > 0 &&
-          carouselItems.map((item, index) => (
-            <SwiperSlide key={index}>
-              <MediaCard {...item} categoria={category.nombre} tipo={category.tipo} />
-            </SwiperSlide>
-          ))}
-      </Swiper>
+      <MySwiper
+        carouselClasses={carouselClasses}
+        carouselItems={carouselItems}
+        category={category}
+      />
     </Box>
   )
 }

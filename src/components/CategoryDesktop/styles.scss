@@ -1,0 +1,11 @@
+section.category {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: var(--pink) solid 3px;
+    margin: .8rem 0;
+    padding-bottom: .8rem;
+
+    &:last-child {
+        border-bottom: initial
+    }
+}

@@ -7,7 +7,7 @@ import useItems from '../../hooks/useItems'
 
 import './styles.scss'
 
-const CategoryHeader = () => {
+const CategoryHeader = ({ categoryToShow }) => {
   const { show } = useParams()
   const { category, getCategoryToShow } = useItems()
 
@@ -15,19 +15,21 @@ const CategoryHeader = () => {
     getCategoryToShow(show)
   }, [getCategoryToShow, show])
 
+  categoryToShow == null && (categoryToShow = category)
+
   return (
     <>
       <section className="category-header">
         <div className="box-category-header">
-          <Link to="/">
+          <Link className="arrow-btn-link" to="/">
             <img alt="Flecha de volver al inicio" className="arrow-btn" src={back} />
           </Link>
-          {category && <h1 className="title-category-header">{category.nombre}</h1>}
+          {categoryToShow && <h1 className="title-category-header">{categoryToShow.nombre}</h1>}
         </div>
 
-        {category && (
+        {categoryToShow && (
           <img
-            alt={`Imagen de la categoria: ${category.nombre} -> ${category.img}`}
+            alt={`Imagen de la categoria: ${categoryToShow.nombre} -> ${categoryToShow.img}`}
             className="img-category-header"
             src="https://dummyimage.com/1280x360/663399/1a1a1a.jpg&text=category-cosmic-vegano.jpg"
           />

@@ -2,8 +2,9 @@ import { useContext, useState } from 'react'
 
 import ProductsContext from '../context/ProductsContext'
 
-const useItemsv3 = () => {
+const useItems = () => {
   const { products, categories, combos, dataLoaded } = useContext(ProductsContext)
+  const [allCarouselItems, setAllCarouselItems] = useState([])
   const [carouselItems, setCarouselItems] = useState([])
   const [item, setItem] = useState(null)
   const [category, setCategory] = useState(null)
@@ -23,6 +24,30 @@ const useItemsv3 = () => {
     let useProductsArray = some(pathsThatUseProducts, pathName)
 
     return { useCombosArray, useProductsArray }
+  }
+
+  const getAllItemsToShow = () => {
+    if (dataLoaded && allCarouselItems.length === 0) {
+      const categoriesWithoutPromos = categories.filter(
+        (categoryElement) => categoryElement.nombre !== 'promos',
+      )
+
+      const AllItemsToShow = categoriesWithoutPromos.map((categoryElement) => {
+        let itemsToShow = null
+
+        categoryElement.tipo === 'producto' &&
+          (itemsToShow = filter(products, 'categoria', categoryElement.id))
+        categoryElement.tipo === 'combo' &&
+          (itemsToShow = filter(combos, 'categoria', categoryElement.id))
+
+        return {
+          carouselItems: itemsToShow,
+          category: categoryElement,
+        }
+      })
+
+      setAllCarouselItems(AllItemsToShow)
+    }
   }
 
   const getCategoryToShow = (showName) => {
@@ -74,7 +99,16 @@ const useItemsv3 = () => {
     }
   }
 
-  return { carouselItems, category, item, getCategoryToShow, getItemToShow, getItemsToShow }
+  return {
+    allCarouselItems,
+    carouselItems,
+    category,
+    item,
+    getAllItemsToShow,
+    getCategoryToShow,
+    getItemToShow,
+    getItemsToShow,
+  }
 }
 
-export default useItemsv3
+export default useItems

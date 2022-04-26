@@ -1,6 +1,8 @@
 @import "../../App.scss";
 
 section.category-header {
+  margin-bottom: .5rem;
+
   .box-category-header {
     @include boxMain(transparent, transparent);
     border: 0;
@@ -19,7 +21,7 @@ section.category-header {
       cursor: pointer;
       height: 40px;
       width: 40px;
-    } 
+    }
   }
   
   .img-category-header {
@@ -28,5 +30,22 @@ section.category-header {
     padding: 0;
     height: 312px;
     width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    .box-category-header {
+      .title-category-header {
+        margin: .8rem 0; 
+      }
+
+      .arrow-btn-link {
+        display: none
+      }
+    }
+
+    .img-category-header {
+      height: 335px;
+      width: 358px;
+    }
   }
 }
