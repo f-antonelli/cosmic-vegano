@@ -5,13 +5,13 @@ const useUtilities = () => {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
-  const formatPrice = (price, withoutDecimals = true) => {
+  const formatPrice = (price, withDecimals = false) => {
     let config = {
       style: 'currency',
       currency: 'ARS',
     }
 
-    if (withoutDecimals) {
+    if (!withDecimals) {
       config = {
         ...config,
         minimumFractionDigits: 0,

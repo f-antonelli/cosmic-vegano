@@ -14,20 +14,31 @@ section.contactus {
         text-decoration: none;
     }
 
-    .card-contactus {
-        display: inline-block;
+    .cards-container-contactus {
+        display: inherit;
+        flex-direction: inherit;
 
-        .icon-contactus {
-            height: 40px;
-            width: 40px;
+        .card-contactus {
+            display: inline-block;
+    
+            .icon-contactus {
+                height: 40px;
+                width: 40px;
+            }
+
+            .text-contactus {
+                color: var(--black);
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                margin: .8rem;
+            }
         }
     }
 
-    .text-contactus {
-        color: var(--black);
-        display: inline-block;
-        font-size: 20px;
-        font-weight: bold;
-        margin: .8rem;
+    @media (min-width: 1200px) {
+        .cards-container-contactus {
+            flex-direction: row;
+        }
     }
 }

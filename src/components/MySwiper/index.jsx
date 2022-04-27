@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import './styles.scss'
 
-const VeganInfo = ({ carouselClasses, carouselItems, category }) => {
+const MySwiper = ({ carouselClasses, carouselItems, category }) => {
   return (
     <Box className={carouselClasses} component="section">
       <Swiper
@@ -35,4 +35,4 @@ const VeganInfo = ({ carouselClasses, carouselItems, category }) => {
   )
 }
 
-export default VeganInfo
+export default MySwiper
