@@ -1,6 +1,9 @@
 @import "../../App.scss";
 
 section.category-header {
+  margin-bottom: .5rem;
+  margin-right: 3rem;
+
   .box-category-header {
     @include boxMain(transparent, transparent);
     border: 0;
@@ -19,7 +22,7 @@ section.category-header {
       cursor: pointer;
       height: 40px;
       width: 40px;
-    } 
+    }
   }
   
   .img-category-header {
@@ -28,5 +31,29 @@ section.category-header {
     padding: 0;
     height: 312px;
     width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    .box-category-header {
+      .title-category-header {
+        background-color: var(--pink);
+        border-radius: .8rem;
+        box-shadow: -1px 4px 8px 0px rgba(0,0,0,0.5);
+        -webkit-box-shadow: -1px 4px 8px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: -1px 4px 8px 0px rgba(0,0,0,0.5);
+        color: var(--white);
+        margin: .8rem 0 1rem; 
+        padding: .5rem .8rem;
+      }
+
+      .arrow-btn-link {
+        display: none
+      }
+    }
+
+    .img-category-header {
+      height: 335px;
+      width: 358px;
+    }
   }
 }

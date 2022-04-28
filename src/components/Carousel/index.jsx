@@ -1,73 +1,38 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import Box from '@mui/material/Box'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Keyboard } from 'swiper'
-import { useParams, useMatch } from 'react-router-dom'
 
-import MediaCard from '../MediaCard'
+import MySwiper from '../MySwiper'
 import useItems from '../../hooks/useItems'
+import usePath from '../../hooks/usePath'
 
-import 'swiper/css'
-import 'swiper/css/pagination'
-//import 'swiper/css/navigation'
 import './styles.scss'
 
-const Carousel = () => {
-  const { getItemsToShow, setCosmicArrayToUse } = useItems()
-  let { show = 'combos' } = useParams()
+const Carousel = ({ title }) => {
+  const { show = 'promos' } = useParams()
+  let { pathname } = useLocation()
+  const { getPath } = usePath()
+  const { carouselItems, category, getItemsToShow } = useItems()
 
-  show = show ? show : 'medallones' // Debe ser 'promos', solo a efectos de prueba es 'medallones'
-
-  const carouselName = `carousel-${show}`
-
-  const isHomeRoute = useMatch('/')
-  const isCategoryRoute = useMatch('/categoria/:show')
-  const isCombosRoute = useMatch('/combos/:show')
-
-  if (isHomeRoute) setCosmicArrayToUse('products') // Debe ser 'combos', solo a efectos de prueba es 'products'
-  if (isCategoryRoute) setCosmicArrayToUse('products')
-  if (isCombosRoute) setCosmicArrayToUse('combos')
-
-  // ↓↓↓↓↓↓ PROBLEMA ↓↓↓↓↓↓
-  const [itemsToShow, setItemsToShow] = useState([])
-  const [categoryName, setCategoryName] = useState('')
+  pathname = getPath(pathname)
 
   useEffect(() => {
-    const { itemsToShow, categoryName } = getItemsToShow(show)
+    getItemsToShow(show, pathname)
+  }, [getItemsToShow, show, pathname])
 
-    setItemsToShow(itemsToShow)
-    setCategoryName(categoryName)
-    /*
-      NOTA:
-      En el return se hace un map de itemsToShow, y dentro se usa categoryName
-    */
-  }, [getItemsToShow, show])
-  // ↑↑↑↑↑↑ PROBLEMA ↑↑↑↑↑↑
+  const carouselClasses = `carousel carousel-${show}`
+  const carouselTitle = title && <h2 className="title-carousel">{title}</h2>
 
   return (
-    <>
-      <Box className={carouselName} component="section" sx={{ mt: 3 }}>
-        <Swiper
-          className="my-swiper"
-          keyboard={{
-            enabled: true,
-          }}
-          modules={[Keyboard]}
-          pagination={{
-            clickable: true,
-          }}
-          slidesPerView={'auto'}
-          spaceBetween={24}
-        >
-          {itemsToShow.length > 0 &&
-            itemsToShow.map((item, index) => (
-              <SwiperSlide key={index}>
-                <MediaCard {...item} categoria={categoryName} />
-              </SwiperSlide>
-            ))}
-        </Swiper>
-      </Box>
-    </>
+    <Box className={carouselClasses} component="section">
+      {carouselTitle}
+
+      <MySwiper
+        carouselClasses={carouselClasses}
+        carouselItems={carouselItems}
+        category={category}
+      />
+    </Box>
   )
 }
 

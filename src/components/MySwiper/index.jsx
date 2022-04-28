@@ -1,26 +1,17 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Keyboard } from 'swiper'
 import Box from '@mui/material/Box'
-import { useParams } from 'react-router-dom'
 
 import MediaCard from '../MediaCard'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
 import './styles.scss'
-import useItemsv2 from '../../hooks/useItemsv2'
 
-const Carouselv2 = () => {
-  //  Si estoy en el home y quiero mostrar algo, lo inicializo con el valor que busco
-  let { show = 'products' } = useParams()
-
-  //  Envio por props el valor que obtengo del useParams
-  const { carouselItems, getItemsToShow } = useItemsv2()
-
-  useEffect(() => {
-    getItemsToShow(show)
-  }, [getItemsToShow, show])
-
+const MySwiper = ({ carouselClasses, carouselItems, category }) => {
   return (
-    <Box component="section" sx={{ mt: 3 }}>
+    <Box className={carouselClasses} component="section">
       <Swiper
         className="my-swiper"
         keyboard={{
@@ -36,7 +27,7 @@ const Carouselv2 = () => {
         {carouselItems.length > 0 &&
           carouselItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <MediaCard {...item} />
+              <MediaCard {...item} categoria={category.nombre} tipo={category.tipo} />
             </SwiperSlide>
           ))}
       </Swiper>
@@ -44,4 +35,4 @@ const Carouselv2 = () => {
   )
 }
 
-export default Carouselv2
+export default MySwiper

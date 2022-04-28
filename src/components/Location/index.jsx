@@ -17,7 +17,7 @@ const Location = () => {
         />
 
         <div className="text-location">
-          <p className="p-location">Dirección:Av. Chaco 864, Resistencia, Chaco</p>
+          <p className="p-location">Dirección: Av. Chaco 864, Resistencia, Chaco</p>
         </div>
       </Box>
     </>

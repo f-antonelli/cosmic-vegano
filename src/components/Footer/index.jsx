@@ -2,11 +2,13 @@ import React from 'react'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 
+import logo from '../../assets/logo.jpg'
 import './styles.scss'
 
 const Footer = () => {
   return (
     <div className="container-footer">
+      <img alt="Logo de Cosmic Vegano" src={logo} />
       <Typography align="center" color="text.secondary">
         {'Copyright © '}
         {new Date().getFullYear()}

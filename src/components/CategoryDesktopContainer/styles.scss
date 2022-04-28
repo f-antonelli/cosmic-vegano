@@ -1,0 +1,8 @@
+@import "../../App.scss";
+
+section.categories {
+    @include boxMain(transparent, transparent);
+    border: 0;
+    margin: .8rem initial;
+    padding: 0;
+}
