@@ -1,0 +1,108 @@
+@import "../../App.scss";
+
+.wrapper {
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 0.2rem 0.4rem;
+  padding: 0 0.3rem 1rem 0.3rem;
+  color: var(--dark-green);
+  .container-menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    img {
+      margin-right: 1rem;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+  .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    background-color: var(--pink);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  .container-indications {
+    display: flex;
+    justify-content: space-between;
+    .box-indication {
+      width: 30%;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .container-ingredients {
+    @include boxMain(var(--pink), transparent);
+    box-shadow: 0px 4px 4px rgba(47, 172, 104, 0.5);
+    margin-bottom: 1rem;
+    .title-ingredients {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      img {
+        width: 3.5rem;
+      }
+      h2 {
+        font-weight: 400;
+        margin-left: 0.3rem;
+      }
+    }
+    .ingredients {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+  }
+  .container-packs {
+    @include boxMain(var(--light-blue), transparent);
+    width: 75%;
+    margin: auto;
+    .box-packs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+      .pack {
+        display: flex;
+        align-items: center;
+        label {
+          margin-right: 0.3rem;
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  .button-buy {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--light-green);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+    padding: 0.2rem 0.5rem ;
+    outline: none;
+    border: none;
+    margin: 1rem 0 0 2rem;
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-right: 0.5rem;
+    }
+    &:hover, &:focus{
+      background-color: var(--dark-green);
+    }
+  }
+}
