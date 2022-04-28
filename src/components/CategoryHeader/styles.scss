@@ -2,7 +2,6 @@
 
 section.category-header {
   margin-bottom: .5rem;
-  margin-right: 3rem;
 
   .box-category-header {
     @include boxMain(transparent, transparent);
@@ -34,6 +33,8 @@ section.category-header {
   }
 
   @media (min-width: 1200px) {
+    margin-right: 3rem;
+
     .box-category-header {
       .title-category-header {
         background-color: var(--pink);
@@ -45,7 +46,7 @@ section.category-header {
         margin: .8rem 0 1rem; 
         padding: .5rem .8rem;
       }
-
+      
       .arrow-btn-link {
         display: none
       }

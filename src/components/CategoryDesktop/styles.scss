@@ -8,4 +8,8 @@ section.category {
     &:last-child {
         border-bottom: initial
     }
+
+    section.carousel {
+        width: calc(100% - 370px - 3rem)
+    }
 }

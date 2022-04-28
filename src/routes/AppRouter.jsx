@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-import CategoryDetails from '../pages/CategoryDetails' // -----> COMPONENT=Presenter
-/* import ProductDetails from '../pages/ProductDetails' */ // -----> COMPONENT=Product
-/* import ComboDetails from '../pages/ComboDetails' */ // -----> COMPONENT=Combo
+import CategoryDetails from '../pages/CategoryDetails'
+/* import ProductDetails from '../pages/ProductDetails' */ // -----> ELEMENT=Product
+/* import ComboDetails from '../pages/ComboDetails' */ // -----> ELEMENT=Combo
 import Thanks from '../pages/Thanks'
 
 const AppRouter = () => {
