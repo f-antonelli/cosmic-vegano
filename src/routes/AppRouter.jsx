@@ -10,7 +10,7 @@ import Thanks from '../pages/Thanks'
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<CategoryDetails />} path="/categoria/:show" />
