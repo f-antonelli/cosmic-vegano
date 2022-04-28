@@ -12,12 +12,3 @@ function App() {
 }
 
 export default App
-
-{
-  /* <Fragment>
-<Navbar />
-<Container maxWidth="lg">
-  <Carousel categories={categorias} items={productos} show="medallones" />
-</Container>
-</Fragment> */
-}

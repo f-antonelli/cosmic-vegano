@@ -55,9 +55,9 @@ const Veganized = () => {
         <p className="p1">Gracias por su compra !!!</p>
         {itemInfo}
 
-        <p className="p2">Por favor, contactanos para coordinar la entrega:</p>
+        <p className="p2">Por favor, contáctanos para coordinar la entrega:</p>
         <a className="button-veganized" href={wapp} rel="noreferrer" target="_blank">
-          Contactanos
+          Contactar
         </a>
       </div>
     </div>

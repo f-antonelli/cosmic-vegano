@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import AboutUs from '../../components/AboutUs'
 import Navbar from '../../components/Navbar'
@@ -18,6 +19,18 @@ const Home = () => {
 
   return (
     <div className="body">
+      <Helmet>
+        <title>Hecho por personas para personas | Cosmic Vegano</title>
+        <link href="https://cosmicvegano.com.ar/" rel="canonical" />
+        <meta
+          content="Comida vegana en Resistencia, Chaco. Hecha por personas, sin conservantes. Con sabores únicos, de otro planeta, y porciones abundantes. Amplia variedad de comidas veganas: empanadas, tartas, milanesas, medallones, para parrilla, almuerzos y mucho más"
+          name="description"
+        />
+        <meta
+          content="comida vegana, comida vegana Resistencia Chaco, comidas veganas, comidas veganas Resistencia Chaco, comida vegana sin conservantes, comida vegana porciones abundantes, comida vegana casera, almuerzo vegano, almuerzos vegano, empanadas veganas, tartas veganas, milanesas veganas, medallones veganos"
+          name="Keywords"
+        />
+      </Helmet>
       <Navbar />
       <Banner />
       <Founders />
