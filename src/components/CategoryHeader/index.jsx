@@ -18,6 +18,7 @@ const CategoryHeader = () => {
   useEffect(() => {
     getCategoryToShow(show)
   }, [getCategoryToShow, show])
+  console.log(category)
 
   return (
     <>

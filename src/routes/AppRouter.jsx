@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route element={<ComboDetails />} path="/combo/:showID" /> */}
         <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />
         <Route element={<Thanks />} path="/veganizado/combo/:showID" />
-        <Route element={<NotFound />} path="*" />
+        <Route element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

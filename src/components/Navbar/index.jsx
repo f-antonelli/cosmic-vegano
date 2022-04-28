@@ -1,23 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import logo from '../../assets/logo.jpg'
 import back from '../../assets/back.svg'
 import hamburger from '../../assets/hamburger.svg'
 import './styles.scss'
 import useModal from '../../hooks/useModal'
+import ProductsContext from '../../context/ProductsContext'
 
-const CATEGORIES = [
-  'PROMOS',
-  'EMPANADAS',
-  'TARTAS',
-  'MILANESAS',
-  'MEDALLONES',
-  'PARRILLA',
-  'ALMUERZO',
-]
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const { isOpen, openModal, closeModal, stopProp } = useModal()
+  const { categories } = useContext(ProductsContext)
+
+  console.log(categories.nombre)
 
   return (
     <div className="container-nav">
@@ -32,10 +28,14 @@ const Navbar = () => {
               <h2 className="title-menu">MENU</h2>
             </div>
             <div className="boxsections-menu">
-              {CATEGORIES.map((categorie, index) => (
-                <button key={index} className="section-menu">
-                  {categorie}
-                </button>
+              {categories.map((categorie) => (
+                <Link
+                  key={categorie.id}
+                  className="section-menu"
+                  to={`categoria/${categorie.nombre}`}
+                >
+                  {categorie.nombre}
+                </Link>
               ))}
             </div>
           </div>
