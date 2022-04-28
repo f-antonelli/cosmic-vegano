@@ -7,6 +7,7 @@ import CategoryDetails from '../pages/CategoryDetails' // -----> COMPONENT=Prese
 /* import ProductDetails from '../pages/ProductDetails' */ // -----> COMPONENT=Product
 /* import ComboDetails from '../pages/ComboDetails' */ // -----> COMPONENT=Combo
 import Thanks from '../pages/Thanks'
+import ProductDetalis from '../pages/ProductDetails'
 
 const AppRouter = () => {
   return (
@@ -15,8 +16,8 @@ const AppRouter = () => {
         <Route element={<Home />} path="/" />
         <Route element={<CategoryDetails />} path="/categoria/:show" />
         <Route element={<CategoryDetails />} path="/combos/:show" />
-        {/* <Route element={<ProductDetails />} path="/producto/:showID" />
-        <Route element={<ComboDetails />} path="/combo/:showID" /> */}
+        <Route element={<ProductDetalis />} path="/producto/:id" />
+        {/* <Route element={<ComboDetails />} path="/combo/:showID" /> */}
         <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />
         <Route element={<Thanks />} path="/veganizado/combo/:showID" />
         <Route element={<NotFound />} />
