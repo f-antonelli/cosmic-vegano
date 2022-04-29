@@ -3,7 +3,7 @@ import './styles.scss'
 
 const AboutUs = () => {
   return (
-    <>
+    <div className="wrapper-aboutus">
       <div className="divider" />
       <div className="container-aboutus">
         <h4 className="title-aboutus">Historia</h4>
@@ -34,7 +34,8 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-    </>
+      <div className="pattern-aboutus" />
+    </div>
   )
 }
 

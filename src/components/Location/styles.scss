@@ -1,6 +1,8 @@
 @import "../../App.scss";
 
 section.location {
+    position: relative;
+    z-index: 2;
     @include boxMain(transparent, transparent);
     border: 0;
     padding: 0;

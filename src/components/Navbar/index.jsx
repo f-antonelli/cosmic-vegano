@@ -40,7 +40,9 @@ const Navbar = () => {
                 <Link
                   key={categorie.id}
                   className="section-menu"
-                  to={`categoria/${categorie.nombre}`}
+                  to={`${categorie.tipo == 'producto' ? 'categoria' : 'combos'}/${
+                    categorie.nombre
+                  }`}
                 >
                   {categorie.nombre}
                 </Link>
