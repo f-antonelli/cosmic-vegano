@@ -17,7 +17,9 @@ const Navbar = () => {
 
   return (
     <div className="container-nav">
-      <img alt="logo" className="logo-nav" src={logo} />
+      <Link className="logo-nav" to="/">
+        <img alt="logo" src={logo} />
+      </Link>
       <h1 className="title-nav">Cosmic Vegano</h1>
       <img alt="hamburger" className="hamburger-nav" src={hamburger} onClick={openModal} />
       {isOpen && (

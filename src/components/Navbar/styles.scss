@@ -5,8 +5,11 @@
   align-items: center;
   border-bottom: 5px solid var(--dark-green);
   background-color: var(--white);
-  .logo-nav {
-    width: 55px;
+  .logo-nav{
+    height: 6vh;
+    img {
+      width: 55px;
+    }
   }
   .title-nav {
     font-family: "Comic Neue", cursive;
