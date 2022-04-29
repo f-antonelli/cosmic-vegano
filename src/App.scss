@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -36,6 +37,21 @@
   border-radius: 50%;
   width: $w;
   height: $h;
+}
+@mixin sectionNav($fz, $pad) {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--pink);
+  color: var(--white);
+  width: 65%;
+  margin-bottom: 1.5rem;
+  padding: $pad;
+  font-size: $fz;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
 }
 
 .body {
