@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+import useUtilities from '../../hooks/useUtilities'
 import useItems from '../../hooks/useItems'
 import back from '../../assets/back.svg'
 import mp from '../../assets/mp.png'
@@ -8,8 +9,8 @@ import time from '../../assets/product/icon-for.svg'
 import bake from '../../assets/product/icon-bake.svg'
 import keep from '../../assets/product/icon-keep.svg'
 import muchef from '../../assets/product/muuchef.png'
+import wpp from '../../assets/wapp.png'
 import './styles.scss'
-import useUtilities from '../../hooks/useUtilities'
 
 const Product = () => {
   const [pack, setPack] = useState(0)
@@ -32,26 +33,29 @@ const Product = () => {
     <div className="wrapper">
       <div className="container-menu">
         <img alt="back" src={back} />
-        <h3>{item.categoria}</h3>
+        <h2>{item.categoria}</h2>
         <h3>{item.nombre}</h3>
       </div>
 
-      <div className="container-img">
-        <img alt="img-food" src={item.img} />
-      </div>
+      <div className="container-desktop">
+        <div className="container-img">
+          <img alt="img-food" src={item.img} />
+        </div>
 
-      <div className="container-indications">
-        <div className="box-indication">
-          <img alt="bake" src={bake} />
-          <p>{item.variantes[pack].rinde}</p>
-        </div>
-        <div className="box-indication">
-          <img alt="time" src={time} />
-          <p>{item.coccion}</p>
-        </div>
-        <div className="box-indication">
-          <img alt="keep" src={keep} />
-          <p>{item.conservacion}</p>
+        <div className="container-indications">
+          <h3>{item.nombre}</h3>
+          <div className="box-indication">
+            <img alt="bake" src={bake} />
+            <p>{item.variantes[pack].rinde}</p>
+          </div>
+          <div className="box-indication">
+            <img alt="time" src={time} />
+            <p>{item.coccion}</p>
+          </div>
+          <div className="box-indication">
+            <img alt="keep" src={keep} />
+            <p>{item.conservacion}</p>
+          </div>
         </div>
       </div>
 
@@ -92,6 +96,10 @@ const Product = () => {
       <Link className="button-buy" to={`${item.variantes[pack].link}`}>
         <h3>Comprar</h3>
         <img alt="mp" src={mp} />
+      </Link>
+
+      <Link to="/">
+        <img alt="whats-app" className="wpp" src={wpp} />
       </Link>
     </div>
   )
