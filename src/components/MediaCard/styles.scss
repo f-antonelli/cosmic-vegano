@@ -1,6 +1,7 @@
-.my-swiper { 
+.my-swiper {
     .card {
         max-width: 255px;
+        user-select: none;
         
         .card__price,
         .MuiCardHeader-title,
@@ -34,6 +35,10 @@
             color: var(--white);
             font-size: 16px;
         }
+    }
+
+    .card-link {
+        text-decoration: none;
     }
 
     .MuiPaper-root {

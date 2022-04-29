@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import back from '../../assets/back.svg'
 import useItems from '../../hooks/useItems'

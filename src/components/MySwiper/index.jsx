@@ -6,7 +6,6 @@ import Box from '@mui/material/Box'
 import MediaCard from '../MediaCard'
 
 import 'swiper/css'
-import 'swiper/css/pagination'
 import './styles.scss'
 
 const MySwiper = ({ carouselClasses, carouselItems, category }) => {
