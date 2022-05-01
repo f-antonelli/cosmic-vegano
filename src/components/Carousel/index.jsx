@@ -21,7 +21,11 @@ const Carousel = ({ title }) => {
   }, [getItemsToShow, show, pathname])
 
   const carouselClasses = `carousel carousel-${show}`
-  const carouselTitle = title && <h2 className="title-carousel">{title}</h2>
+  const carouselTitle = title && (
+    <div className="box-title-carousel">
+      <h2 className="title-carousel">{title}</h2>
+    </div>
+  )
 
   return (
     <Box className={carouselClasses} component="section">

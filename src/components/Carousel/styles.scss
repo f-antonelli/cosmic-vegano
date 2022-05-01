@@ -5,11 +5,26 @@ section.carousel {
   border: 0;
   margin: .8rem initial;
   padding: 0;
+
+  .box-title-carousel {
+    @include boxMain(transparent, transparent);
+    border: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   
   .title-carousel {
     font-size: 24px;
-    margin: .8rem 0;
-    text-align: center;
     text-transform: uppercase;
+    background-color: var(--pink);
+    border-radius: .8rem;
+    box-shadow: -1px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: -1px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    margin: .8rem 0 1rem;
+    padding: .5rem 2rem;
   }
 }
