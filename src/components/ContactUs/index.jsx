@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 
 import iconEmail from '../../assets/social/icon-email.svg'
 import iconFacebook from '../../assets/social/icon-facebook.svg'
-import iconInstagram from '../../assets/social/icon-instagram.svg'
+import iconInsta from '../../assets/social/icon-insta.svg'
 
 import './styles.scss'
 
@@ -16,11 +16,7 @@ const Location = () => {
         <div className="cards-container-contactus">
           <div className="card-contactus">
             <a href="https://www.instagram.com/cosmicvegano/" rel="noreferrer" target="_blank">
-              <img
-                alt="Icono red social Instagram"
-                className="icon-contactus"
-                src={iconInstagram}
-              />
+              <img alt="Icono red social Instagram" className="icon-contactus" src={iconInsta} />
               <div className="text-contactus">
                 <p className="p-contactus">/cosmicvegano</p>
               </div>
