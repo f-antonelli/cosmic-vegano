@@ -9,19 +9,19 @@
 		{
 			"id": 2,
 			"nombre": "tartas",
-			"img": "null.jpg",
+			"img": "img-faltante.jpg",
 			"tipo": "producto"
 		},
 		{
 			"id": 3,
 			"nombre": "milanesas",
-			"img": "mila-de-seitan.jpg",
+			"img": "img-faltante.jpg",
 			"tipo": "producto"
 		},
 		{
 			"id": 4,
 			"nombre": "medallones",
-			"img": "medallon-garbanzo",
+			"img": "img-faltante.jpg",
 			"tipo": "producto"
 		},
 		{
@@ -33,152 +33,283 @@
 		{
 			"id": 6,
 			"nombre": "promos",
-			"img": "catering.jpg",
+			"img": "img-faltante.jpg",
 			"tipo": "combo"
 		},
 		{
 			"id": 7,
 			"nombre": "almuerzo",
-			"img": "catering.jpg",
+			"img": "almuerzo.jpg",
 			"tipo": "combo"
 		}
 	],
 	"productos":[
 		{
 			"id": 1,
-			"nombre":"Seitán",
-			"categoria": 3,
-			"img": "mila-de-seitan.jpg",
-			"coccion": "Horno",
-			"conservacion": "3 dias a -5 grados",
-			"ingredientes": "Garbanzos, gluten puro de trigo, harina de garbanzos, pan rallado, condimentos y sal.",
+			"nombre":"No pollo",
+			"categoria": 1,
+			"img": "producto-no-pollo.jpg",
+			"coccion": "20 minutos al horno, 6 minutos fritas",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Arveja amarilla texturizada, cebolla, ajo, morrones, puerro, cebollita de verdeo, condimentos y sal.",
 			"variantes": [
 				{
-					"cantidad": "500g",
-					"rinde": "2-3",
-					"precio": 100,
-					"link": "https//mp.com"
+					"cantidad": "6 unidades",
+					"rinde": "2 personas",
+					"precio": 700,
+					"link": "https://mpago.la/23i9U9e"
 				},
 				{
-					"cantidad": "1kg",
-					"rinde": "4-6",
-					"precio": 190,
-					"link": "https//mp2.com"
+					"cantidad": "12 unidades",
+					"rinde": "3 personas",
+					"precio": 1200,
+					"link": "https://mpago.la/1HB2i1b"
 				}
 			]
 		},
 		{
 			"id": 2,
-			"nombre":"Garbanzo",
-			"categoria": 4,
-			"img": "medallon-garbanzo.jpg",
-			"coccion": "Horno",
-			"conservacion": "5 dias",
-			"ingredientes": "Garbanzos, ajo, harinas sin gluten, condimentos y sal.",
+			"nombre":"No carne",
+			"categoria": 1,
+			"img": "producto-no-carne.jpg",
+			"coccion": "20 minutos al horno, 6 minutos fritas",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Arveja amarilla texturizada, cebolla, ajo, morrones, puerro, cebollita de verdeo, condimentos y sal.",
 			"variantes": [
 				{
-					"cantidad": "6u",
-					"rinde": "3",
-					"precio": 66,
-					"link": "https//mp.com"
+					"cantidad": "6 unidades",
+					"rinde": "2 personas",
+					"precio": 700,
+					"link": "https://mpago.la/2wqc2SA"
 				},
 				{
-					"cantidad": "12u",
-					"rinde": "6",
-					"precio": 80,
-					"link": "https//mp2.com"
+					"cantidad": "12 unidades",
+					"rinde": "3 personas",
+					"precio": 1200,
+					"link": "https://mpago.la/224CreL"
 				}
 			]
 		},
 		{
 			"id": 3,
-			"nombre":"Batata y remolacha",
-			"categoria": 4,
-			"img": "medallon-remolacha.jpg",
-			"coccion": "Horno",
-			"conservacion": "5 dias",
-			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"nombre":"Choclo",
+			"categoria": 2,
+			"img": "producto-img-faltante.jpg",
+			"coccion": "20 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Harina integral, semillas activadas, choclo, morrones, cebolla, condimentos y sal.",
 			"variantes": [
 				{
-					"cantidad": "6u",
-					"rinde": "3",
-					"precio": 67,
-					"link": "https//mp.com"
-				},
-				{
-					"cantidad": "12u",
-					"rinde": "6",
-					"precio": 81,
-					"link": "https//mp2.com"
+					"cantidad": "1 unidad",
+					"rinde": "2 personas",
+					"precio": 700,
+					"link": "https://mpago.la/2eiNbM6"
 				}
 			]
 		},
 		{
 			"id": 4,
-			"nombre":"Garbanzo v2",
-			"categoria": 4,
-			"img": "medallon-garbanzo.jpg",
-			"coccion": "Horno",
-			"conservacion": "5 dias",
-			"ingredientes": "Garbanzos, ajo, harinas sin gluten, condimentos y sal.",
+			"nombre":"Garbanzo, puerro y cebolla",
+			"categoria": 2,
+			"img": "producto-tarta-garbanzo.jpg",
+			"coccion": "20 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Harina integral, semillas activadas, garbanzo, puerro, cebolla, condimentos y sal.",
 			"variantes": [
 				{
-					"cantidad": "6u",
-					"rinde": "3",
-					"precio": 68,
-					"link": "https//mp.com"
-				},
-				{
-					"cantidad": "12u",
-					"rinde": "6",
-					"precio": 84,
-					"link": "https//mp2.com"
+					"cantidad": "1 unidad",
+					"rinde": "2 personas",
+					"precio": 700,
+					"link": "https://mpago.la/1oAUZF3"
 				}
 			]
 		},
 		{
 			"id": 5,
-			"nombre":"Batata y remolacha v2",
-			"categoria": 4,
-			"img": "medallon-remolacha.jpg",
-			"coccion": "Horno",
-			"conservacion": "5 dias",
-			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"nombre":"Seitán",
+			"categoria": 3,
+			"img": "producto-mila-de-seitan.jpg",
+			"coccion": "15 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Garbanzos, gluten puro de trigo, harina de garbanzos, pan rallado, condimentos y sal.",
 			"variantes": [
 				{
-					"cantidad": "6u",
-					"rinde": "3",
-					"precio": 68,
-					"link": "https//mp.com"
+					"cantidad": "500g",
+					"rinde": "3 personas",
+					"precio": 700,
+					"link": "https://mpago.la/17emvC8"
 				},
 				{
-					"cantidad": "12u",
-					"rinde": "6",
-					"precio": 84,
-					"link": "https//mp2.com"
+					"cantidad": "1kg",
+					"rinde": "6 personas",
+					"precio": 1200,
+					"link": "https://mpago.la/1Riepse"
 				}
 			]
 		},
 		{
 			"id": 6,
-			"nombre":"Batata y remolacha v3",
-			"categoria": 4,
-			"img": "medallon-remolacha.jpg",
-			"coccion": "Horno",
-			"conservacion": "5 dias",
-			"ingredientes": "Batata, remolacha, arros yamaní, harinas sin gluten, condimentos y sal.",
+			"nombre":"Soja",
+			"categoria": 3,
+			"img": "producto-mila-de-soja.jpg",
+			"coccion": "20 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Porotos de soja, perejil, levadura nutricional, salsa de soja, harina sin gluten, condimentos y sal. Empanadas en salvado de avena y avena.",
 			"variantes": [
 				{
-					"cantidad": "6u",
-					"rinde": "3",
-					"precio": 80,
-					"link": "https//mp.com"
+					"cantidad": "500g",
+					"rinde": "2 personas",
+					"precio": 700,
+					"link": "https://mpago.la/323y6MJ"
 				},
 				{
-					"cantidad": "12u",
-					"rinde": "6",
-					"precio": 135,
-					"link": "https//mp2.com"
+					"cantidad": "1kg",
+					"rinde": "5 personas",
+					"precio": 1200,
+					"link": "https://mpago.la/2bQcmXT"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"nombre":"Batata y remolacha",
+			"categoria": 4,
+			"img": "producto-medallon-remolacha.jpg",
+			"coccion": "15 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Batata, remolacha, arroz yamaní, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "4 unidades",
+					"rinde": "2 personas",
+					"precio": 600,
+					"link": "https://mpago.la/266nYjd"
+				},
+				{
+					"cantidad": "8 unidades",
+					"rinde": "4 personas",
+					"precio": 1000,
+					"link": "https://mpago.la/2jqXCYL"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"nombre":"Lenteja y berenjena",
+			"categoria": 4,
+			"img": "producto-img-faltante.jpg",
+			"coccion": "15 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Lentejas, berenjena, cebolla, ajo, morrones, salsa de soja, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "4 unidades",
+					"rinde": "2 personas",
+					"precio": 600,
+					"link": "https://mpago.la/2gq6qyW"
+				},
+				{
+					"cantidad": "8 unidades",
+					"rinde": "4 personas",
+					"precio": 1000,
+					"link": "https://mpago.la/2zt6UhU"
+				}
+			]
+		},
+		{
+			"id": 9,
+			"nombre":"Lenteja y vegetales",
+			"categoria": 4,
+			"img": "producto-medallon-lenteja-y-vegetales.jpg",
+			"coccion": "15 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Lentejas, cebolla, ajo, morrones, salsa de soja, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "4 unidades",
+					"rinde": "2 personas",
+					"precio": 600,
+					"link": "https://mpago.la/2ch5vP2"
+				},
+				{
+					"cantidad": "8 unidades",
+					"rinde": "4 personas",
+					"precio": 1000,
+					"link": "https://mpago.la/1ZHMzfD"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"nombre":"Garbanzos",
+			"categoria": 4,
+			"img": "producto-medallon-garbanzo.jpg",
+			"coccion": "15 minutos al horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Garbanzos, ajo, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "4 unidades",
+					"rinde": "2 personas",
+					"precio": 600,
+					"link": "https://mpago.la/1LNvs8W"
+				},
+				{
+					"cantidad": "8 unidades",
+					"rinde": "4 personas",
+					"precio": 1000,
+					"link": "https://mpago.la/2doqkas"
+				}
+			]
+		},
+		{
+			"id": 11,
+			"nombre":"Salchichas",
+			"categoria": 5,
+			"img": "producto-veganchichas.jpg",
+			"coccion": "10 minutos en horno, parrilla o sartén",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Lentejas, arroz yamaní, remolacha, salsa de soja, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "5 unidades",
+					"rinde": "2 personas",
+					"precio": 550,
+					"link": "https://mpago.la/2RjZ6b8"
+				}
+			]
+		},
+		{
+			"id": 12,
+			"nombre":"Chorizos",
+			"categoria": 5,
+			"img": "producto-choripan.jpg",
+			"coccion": "10 minutos en horno, parrilla o sartén",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Porotos colorados, gluten puro de trigo, cebollas, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "500g",
+					"rinde": "2 personas",
+					"precio": 650,
+					"link": "https://mpago.la/1Tz4BXY"
+				}
+			]
+		},
+		{
+			"id": 13,
+			"nombre":"Patitas de garbanzo",
+			"categoria": 5,
+			"img": "producto-patitas.jpg",
+			"coccion": "15 minutos en horno",
+			"conservacion": "1 mes en el freezer y 3 días en la heladera",
+			"ingredientes": "Garbanzos, perejil, ajo, harinas sin gluten, condimentos y sal.",
+			"variantes": [
+				{
+					"cantidad": "12 unidades",
+					"rinde": "2 personas",
+					"precio": 550,
+					"link": "https://mpago.la/1mqxCST"
 				}
 			]
 		}
@@ -186,45 +317,95 @@
 	"combos":[
 		{
 			"id": 1,
-			"nombre": "Parrillada cosmica",
+			"nombre": "Cosmic Box",
 			"categoria": 6,
-			"img": "combo-1.jpg",
-			"precio": 1100,
-			"link": "https//mp2.com",
+			"img": "combo-img-faltante.jpg",
+			"precio": 4400,
+			"link": "https://mpago.la/19kLtxQ",
 			"productos": [
 				{
 					"cantidad": "5 unidades",
-					"producto": "Salchichas"
+					"producto": "salchichas"
 				},
 				{
 					"cantidad": "4 unidades",
-					"producto": "Chorizos"
+					"producto": "chorizos"
 				},
 				{
 					"cantidad": "12 unidades",
-					"producto": "Patitas de garbanzo"
+					"producto": "patitas de garbanzo"
 				}
 			]
 		},
 		{
 			"id": 2,
-			"nombre": "Medallones olimpicos",
+			"nombre": "Medallones x 24",
 			"categoria": 6,
-			"img": "combo-1.jpg",
-			"precio": 1200,
-			"link": "https//mp2.com",
+			"img": "combo-img-faltante.jpg",
+			"precio": 2420,
+			"link": "https://mpago.la/2Z37tmF",
+			"productos": [
+				{
+					"cantidad": "24 unidades",
+					"producto": "medallones"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"nombre": "Medallones x 32",
+			"categoria": 6,
+			"img": "combo-img-faltante.jpg",
+			"precio": 2970,
+			"link": "https://mpago.la/21erwEb",
+			"productos": [
+				{
+					"cantidad": "32 unidades",
+					"producto": "medallones"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"nombre": "Básico",
+			"categoria": 6,
+			"img": "combo-img-faltante.jpg",
+			"precio": 1870,
+			"link": "https://mpago.la/2JhodYE",
 			"productos": [
 				{
 					"cantidad": "4 unidades",
-					"producto": "Medallones de batata y remolacha"
+					"producto": "medallones"
 				},
 				{
-					"cantidad": "4 unidades",
-					"producto": "Medallones de lenteja y berenjena"
+					"cantidad": "500g",
+					"producto": "milanesas"
 				},
 				{
-					"cantidad": "4 unidades",
-					"producto": "Medallones de lenteja y vegetales"
+					"cantidad": "1 pack",
+					"producto": "salchichas o patitas"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"nombre": "Mediano",
+			"categoria": 6,
+			"img": "combo-img-faltante.jpg",
+			"precio": 1200,
+			"link": "https://mpago.la/2fqVDrG",
+			"productos": [
+				{
+					"cantidad": "8 unidades",
+					"producto": "medallones"
+				},
+				{
+					"cantidad": "1 unidad",
+					"producto": "tarta"
+				},
+				{
+					"cantidad": "1 pack",
+					"producto": "salchichas o patitas"
 				}
 			]
 		}
