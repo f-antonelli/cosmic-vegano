@@ -30,7 +30,7 @@ const CategoryHeader = ({ categoryToShow }) => {
           <img
             alt={`Imagen de la categoria: ${categoryToShow.nombre} -> ${categoryToShow.img}`}
             className="img-category-header"
-            src={`/img/categoria/${categoryToShow.img}`}
+            src={`img/categoria/${categoryToShow.img}`}
           />
         )}
       </section>

@@ -29,7 +29,7 @@ const MediaCard = ({ categoria, nombre, id, img, precio, variantes, tipo }) => {
           alt={`${categoria} ${nombre} + ${img}`}
           className="card__img"
           component="img"
-          image={`/img/${img}`}
+          image={`img/${img}`}
         />
         <CardContent>
           <p className="card__price">
