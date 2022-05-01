@@ -11,8 +11,7 @@ import ProductDetalis from '../pages/ProductDetails'
 
 const AppRouter = () => {
   return (
-    // <BrowserRouter basename={`/cosmic-vegano`}>
-    <BrowserRouter>
+    <BrowserRouter basename={`/cosmic-vegano`}>
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<CategoryDetails />} path="/categoria/:show" />
