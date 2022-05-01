@@ -13,7 +13,6 @@ const CategoryHeader = ({ categoryToShow }) => {
   useEffect(() => {
     getCategoryToShow(show)
   }, [getCategoryToShow, show])
-  console.log(category)
 
   categoryToShow == null && (categoryToShow = category)
 
