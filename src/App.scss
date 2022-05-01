@@ -29,6 +29,11 @@
   border: 3.5px solid $color;
   border-radius: 1rem;
   background-color: $bg;
+
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
 }
 
 @mixin patternSpeck($w, $h, $bg) {

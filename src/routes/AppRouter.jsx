@@ -11,6 +11,7 @@ import ProductDetalis from '../pages/ProductDetails'
 
 const AppRouter = () => {
   return (
+    //<BrowserRouter>
     <BrowserRouter basename={`/cosmic-vegano`}>
       <Routes>
         <Route element={<Home />} path="/" />
