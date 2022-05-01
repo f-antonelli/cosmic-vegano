@@ -367,7 +367,7 @@
 		},
 		{
 			"id": 4,
-			"nombre": "Básico",
+			"nombre": "Combo básico",
 			"categoria": 6,
 			"img": "combo-img-faltante.jpg",
 			"precio": 1870,
@@ -389,7 +389,7 @@
 		},
 		{
 			"id": 5,
-			"nombre": "Mediano",
+			"nombre": "Combo mediano",
 			"categoria": 6,
 			"img": "combo-img-faltante.jpg",
 			"precio": 1200,

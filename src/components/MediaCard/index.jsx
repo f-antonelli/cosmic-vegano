@@ -29,7 +29,7 @@ const MediaCard = ({ categoria, nombre, id, img, precio, variantes, tipo }) => {
           alt={`${categoria} ${nombre} + ${img}`}
           className="card__img"
           component="img"
-          image="https://dummyimage.com/255x184/eef770/1a1a1a.jpg&text=img-cosmic-vegano.jpg"
+          image={`/img/${img}`}
         />
         <CardContent>
           <p className="card__price">
