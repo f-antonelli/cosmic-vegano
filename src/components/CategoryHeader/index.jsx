@@ -28,9 +28,9 @@ const CategoryHeader = ({ categoryToShow }) => {
 
         {categoryToShow && (
           <img
-            alt={`Imagen de la categoria: ${categoryToShow.nombre} -> ${categoryToShow.img}`}
+            alt={`Imagen de la categoria: ${categoryToShow.nombre}`}
             className="img-category-header"
-            src={`img/categoria/${categoryToShow.img}`}
+            src={`/img/categoria/${categoryToShow.img}`}
           />
         )}
       </section>
