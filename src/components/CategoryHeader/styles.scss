@@ -34,6 +34,8 @@ section.category-header {
 
   @media (min-width: 1200px) {
     margin-right: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 24px;
 
     .box-category-header {
       .title-category-header {
@@ -53,9 +55,9 @@ section.category-header {
     }
 
     .img-category-header {
-      height: 335px;
+      height: 353px;
       object-fit: cover;
-      width: 358px;
+      width: 376px;
     }
   }
 }

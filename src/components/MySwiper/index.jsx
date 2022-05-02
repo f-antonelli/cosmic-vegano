@@ -1,11 +1,12 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Keyboard } from 'swiper'
+import { Keyboard, Pagination } from 'swiper'
 import Box from '@mui/material/Box'
 
 import MediaCard from '../MediaCard'
 
 import 'swiper/css'
+import 'swiper/css/pagination'
 import './styles.scss'
 
 const MySwiper = ({ carouselClasses, carouselItems, category }) => {
@@ -16,7 +17,7 @@ const MySwiper = ({ carouselClasses, carouselItems, category }) => {
         keyboard={{
           enabled: true,
         }}
-        modules={[Keyboard]}
+        modules={[Keyboard, Pagination]}
         pagination={{
           clickable: true,
         }}

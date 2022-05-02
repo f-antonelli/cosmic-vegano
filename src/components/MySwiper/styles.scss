@@ -1,9 +1,18 @@
 section.carousel {
     .my-swiper {
         margin: 0;
+        padding-bottom: 24px;
         
         .swiper-slide {
             max-width: 255px;
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+
+            .swiper-pagination-bullet-active {
+                background: var(--pink);
+            }
         }
       }
 }

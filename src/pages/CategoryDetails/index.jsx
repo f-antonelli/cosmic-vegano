@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Navbar from '../../components/Navbar'
 import CategoryHeader from '../../components/CategoryHeader'
 import Carousel from '../../components/Carousel'
+import ContactUs from '../../components/ContactUs'
 import Footer from '../../components/Footer'
 import '../../App.scss'
 
@@ -20,6 +21,7 @@ const CategoryDetails = () => {
       <Navbar />
       <CategoryHeader />
       <Carousel />
+      <ContactUs />
       <Footer />
     </div>
   )
