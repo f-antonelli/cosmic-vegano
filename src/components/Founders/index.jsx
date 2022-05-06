@@ -24,7 +24,7 @@ const Founders = () => {
           Te ofrecemos opciones veganas para salvarte: en 20 tenés preparado un plato 100% plant
           based y zarpado en rico 🌱
         </p>
-        <p className="text-founders">FUNDADORAS</p>
+        <p className="text-founders">FUNDADORES</p>
 
         <div className="container-cards">
           {FOUNDERS.map((founder, index) => (
