@@ -93,10 +93,15 @@ const Product = () => {
         <p>{formatPrice(item.variantes[pack].precio)}</p>
       </section>
 
-      <Link className="button-buy" to={`${item.variantes[pack].link}`}>
+      <a
+        className="button-buy"
+        href={`${item.variantes[pack].link}`}
+        rel="noreferrer"
+        target="_blank"
+      >
         <h3>Comprar</h3>
         <img alt="mp" src={mp} />
-      </Link>
+      </a>
 
       <Link to="/">
         <img alt="whats-app" className="wpp" src={wpp} />
