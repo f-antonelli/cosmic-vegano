@@ -20,13 +20,14 @@ const Navbar = () => {
       <div className="box-nav">
         <h1 className="title-nav">Cosmic Vegano</h1>
         <div className="nav-desktop">
-          {categories.map((categorie) => (
-            <a key={categorie.id} className="nav-item" href={`#${categorie.nombre}`}>
+          {categories.map((categorie, index) => (
+            <a key={index} className="nav-item" href={`#${categorie.nombre}`}>
               {categorie.nombre}
             </a>
           ))}
         </div>
       </div>
+
       <img alt="hamburger" className="hamburger-nav" src={hamburger} onClick={openModal} />
       {isOpen && (
         <div className="container-menu" onClick={closeModal}>

@@ -32,7 +32,6 @@
     }
     .nav-desktop {
       margin: 1rem 0;
-      text-align: end;
       .nav-item {
         @include sectionNav(1.1rem, 0.2rem 1rem);
         margin: 0 0.3rem;
@@ -96,6 +95,6 @@
     }
   }
   @media (min-width: 1200px) {
-    height: 15vh;
+    height: 150px;
   }
 }

@@ -1,6 +1,12 @@
 {
 	"categorias": [
 		{
+			"id": 10,
+			"nombre": "promos",
+			"img": "img-faltante.jpg",
+			"tipo": "combo"
+		},
+		{
 			"id": 1,
 			"nombre": "empanadas",
 			"img": "empanadas.jpg",
@@ -31,13 +37,7 @@
 			"tipo": "producto"
 		},
 		{
-			"id": 6,
-			"nombre": "promos",
-			"img": "img-faltante.jpg",
-			"tipo": "combo"
-		},
-		{
-			"id": 7,
+			"id": 11,
 			"nombre": "almuerzo",
 			"img": "almuerzo.jpg",
 			"tipo": "combo"
@@ -318,7 +318,7 @@
 		{
 			"id": 1,
 			"nombre": "Cosmic Box",
-			"categoria": 6,
+			"categoria": 10,
 			"img": "combo-img-faltante.jpg",
 			"precio": 4400,
 			"link": "https://mpago.la/19kLtxQ",
@@ -340,7 +340,7 @@
 		{
 			"id": 2,
 			"nombre": "Medallones x 24",
-			"categoria": 6,
+			"categoria": 10,
 			"img": "combo-img-faltante.jpg",
 			"precio": 2420,
 			"link": "https://mpago.la/2Z37tmF",
@@ -354,7 +354,7 @@
 		{
 			"id": 3,
 			"nombre": "Medallones x 32",
-			"categoria": 6,
+			"categoria": 10,
 			"img": "combo-img-faltante.jpg",
 			"precio": 2970,
 			"link": "https://mpago.la/21erwEb",
@@ -368,7 +368,7 @@
 		{
 			"id": 4,
 			"nombre": "Combo básico",
-			"categoria": 6,
+			"categoria": 10,
 			"img": "combo-img-faltante.jpg",
 			"precio": 1870,
 			"link": "https://mpago.la/2JhodYE",
@@ -390,7 +390,7 @@
 		{
 			"id": 5,
 			"nombre": "Combo mediano",
-			"categoria": 6,
+			"categoria": 10,
 			"img": "combo-img-faltante.jpg",
 			"precio": 1200,
 			"link": "https://mpago.la/2fqVDrG",
