@@ -3,6 +3,11 @@ section.carousel {
         margin: 0;
         padding-bottom: 24px;
         
+        img.soon {
+            display: block;
+            margin: 0 auto;
+        }
+
         .swiper-slide {
             max-width: 255px;
         }

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Keyboard, Pagination } from 'swiper'
 import Box from '@mui/material/Box'
 
+import soon from '../../assets/soon.png'
 import MediaCard from '../MediaCard'
 
 import 'swiper/css'
@@ -24,12 +25,15 @@ const MySwiper = ({ carouselClasses, carouselItems, category }) => {
         slidesPerView={'auto'}
         spaceBetween={24}
       >
-        {carouselItems.length > 0 &&
+        {carouselItems.length > 0 ? (
           carouselItems.map((item, index) => (
             <SwiperSlide key={index}>
               <MediaCard {...item} categoria={category.nombre} tipo={category.tipo} />
             </SwiperSlide>
-          ))}
+          ))
+        ) : (
+          <img alt="Próximamente..." className="soon" src={soon} />
+        )}
       </Swiper>
     </Box>
   )
