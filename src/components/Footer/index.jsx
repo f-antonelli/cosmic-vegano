@@ -18,7 +18,12 @@ const Footer = () => {
         </Link>
       </Typography>
       <div className="team-footer">
-        <a className="team-members" href="#" rel="noreferrer" target="_blank">
+        <a
+          className="team-members"
+          href="https://linktr.ee/workgroup_x"
+          rel="noreferrer"
+          target="_blank"
+        >
           Designers and developers
         </a>
       </div>
