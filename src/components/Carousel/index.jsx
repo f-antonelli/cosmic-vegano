@@ -27,8 +27,12 @@ const Carousel = ({ title }) => {
     </div>
   )
 
+  let id = null
+
+  show === 'promos' && (id = show)
+
   return (
-    <Box className={carouselClasses} component="section">
+    <Box className={carouselClasses} component="section" id={id}>
       {carouselTitle}
 
       <MySwiper
