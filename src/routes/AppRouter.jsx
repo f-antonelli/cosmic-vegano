@@ -5,7 +5,7 @@ import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import CategoryDetails from '../pages/CategoryDetails'
 import ProductDetails from '../pages/ProductDetails'
-/* import ComboDetails from '../pages/ComboDetails' */ // -----> ELEMENT=Combo
+import ComboDetails from '../pages/ComboDetails'
 import Thanks from '../pages/Thanks'
 
 const AppRouter = () => {
@@ -16,7 +16,7 @@ const AppRouter = () => {
         <Route element={<CategoryDetails />} path="/categoria/:show" />
         <Route element={<CategoryDetails />} path="/combos/:show" />
         <Route element={<ProductDetails />} path="/producto/:id" />
-        {/* <Route element={<ComboDetails />} path="/combo/:showID" /> */}
+        <Route element={<ComboDetails />} path="/combo/:id" />
         <Route element={<Thanks />} path="/veganizado/producto/:showID/:variant" />
         <Route element={<Thanks />} path="/veganizado/combo/:showID" />
         <Route element={<NotFound />} path="*" />

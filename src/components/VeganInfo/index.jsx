@@ -24,6 +24,7 @@ const VeganInfo = () => {
   return (
     <>
       <div className="divider" />
+
       <div className="container-veganinfo">
         <div className="title-veganinfo">
           <img alt="cow" src={cow} />

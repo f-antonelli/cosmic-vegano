@@ -1,0 +1,129 @@
+@import "../../App.scss";
+
+.wrapper {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 0.2rem 0.4rem;
+  padding: 0 0.3rem 1rem 0.3rem;
+  color: var(--dark-green);
+  max-width: 1140px;
+  min-height: 91vh;
+  @media (min-width: 1140px) {
+    margin: 0.2rem auto;
+  }
+  .container-menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    img {
+      margin-right: 1rem;
+    }
+    h3,
+    h2 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    @media (min-width: 930px) {
+      h3 {
+        display: none;
+      }
+    }
+  }
+  .box-img {
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30vh;
+      background-color: var(--pink);
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .container-combos {
+    @include boxMain(var(--pink), transparent);
+    box-shadow: 0px 4px 4px rgba(47, 172, 104, 0.5);
+    max-width: 700px !important;
+    margin: 1rem auto;
+    .title-ingredients {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      img {
+        width: 3.5rem;
+      }
+      h2 {
+        font-weight: 400;
+        margin-left: 0.3rem;
+      }
+    }
+    .box-combos {
+      display: flex;
+      flex-direction: column;
+      .combo {
+        display: flex;
+        align-items: center;
+        h3 {
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 1.3rem;
+          margin-right: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    @media (min-width: 930px) {
+      height: 20vh !important;
+      margin-bottom: 2rem;
+      justify-content: center;
+
+    }
+  }
+
+  .box-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  .button-buy-combo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--light-green);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+    padding: 0.2rem 0.5rem;
+    width: 13rem;
+    text-decoration: none;
+    margin: 3rem auto;
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-right: 0.5rem;
+    }
+    &:hover,
+    &:focus {
+      background-color: var(--dark-green);
+    }
+    // @media (min-width: 930px) {
+    //   margin: 3rem auto 2rem auto;
+    // }
+  }
+}
