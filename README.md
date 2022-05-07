@@ -22,6 +22,6 @@ Install my-project with yarn
 
 ## Designers and developers
 
-- Designer [@damian-russo](https://google.com.ar)
+- Designer [@damian-russo](https://www.linkedin.com/in/damian-russo)
 - Fullstack Developer [@f-antonelli](https://github.com/f-antonelli)
 - Fullstack Developer [@ignaciogz](https://github.com/ignaciogz)
