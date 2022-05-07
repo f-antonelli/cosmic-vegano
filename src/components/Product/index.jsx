@@ -32,15 +32,15 @@ const Product = () => {
   ) : (
     <div className="wrapper">
       <div className="container-menu">
-        <img alt="back" src={back} />
+        <Link className="arrow-btn-link" to="/">
+          <img alt="Flecha de volver al inicio" src={back} />
+        </Link>
         <h2>{item.categoria}</h2>
         <h3>{item.nombre}</h3>
       </div>
 
       <div className="container-desktop">
-        <div className="container-img">
-          <img alt="img-food" src={item.img} />
-        </div>
+        <img alt="img-food" className="container-img" src={`/img/${item.img}`} />
 
         <div className="container-indications">
           <h3>{item.nombre}</h3>

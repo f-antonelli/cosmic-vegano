@@ -8,7 +8,7 @@ import './styles.scss'
 import useModal from '../../hooks/useModal'
 import ProductsContext from '../../context/ProductsContext'
 
-const Navbar = () => {
+const Navbar = ({ showBtns }) => {
   const { isOpen, openModal, closeModal, stopProp } = useModal()
   const { categories } = useContext(ProductsContext)
 
@@ -20,11 +20,12 @@ const Navbar = () => {
       <div className="box-nav">
         <h1 className="title-nav">Cosmic Vegano</h1>
         <div className="nav-desktop">
-          {categories.map((categorie, index) => (
-            <a key={index} className="nav-item" href={`#${categorie.nombre}`}>
-              {categorie.nombre}
-            </a>
-          ))}
+          {showBtns &&
+            categories.map((categorie, index) => (
+              <a key={index} className="nav-item" href={`#${categorie.nombre}`}>
+                {categorie.nombre}
+              </a>
+            ))}
         </div>
       </div>
 

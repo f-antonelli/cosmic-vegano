@@ -31,7 +31,7 @@ const Home = () => {
           name="Keywords"
         />
       </Helmet>
-      <Navbar />
+      <Navbar showBtns={true} />
       <Banner />
       <Founders />
       <VeganInfo />

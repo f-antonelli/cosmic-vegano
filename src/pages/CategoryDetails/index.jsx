@@ -18,7 +18,7 @@ const CategoryDetails = () => {
           name="description"
         />
       </Helmet>
-      <Navbar />
+      <Navbar showBtns={false} />
       <CategoryHeader />
       <Carousel />
       <ContactUs />
