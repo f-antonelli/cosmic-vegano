@@ -21,7 +21,6 @@ const Product = () => {
   useEffect(() => {
     getItemToShow(id, '/producto')
   }, [getItemToShow, id])
-  console.log(item)
 
   const handleChangeInput = (e) => {
     setPack(e.target.value)
