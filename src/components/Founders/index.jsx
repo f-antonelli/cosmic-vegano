@@ -4,9 +4,11 @@ import './styles.scss'
 const FOUNDERS = [
   {
     name: 'SOL',
+    photo: '/img/personal/sol.jpg',
   },
   {
     name: 'VALEN',
+    photo: '/img/personal/valente.jpg',
   },
 ]
 
@@ -29,7 +31,7 @@ const Founders = () => {
         <div className="container-cards">
           {FOUNDERS.map((founder, index) => (
             <div key={index} className="card-founder">
-              <div className="img" /> {/*then use img src */}
+              <img alt={`Foto de ${founder.name}`} className="img" src={founder.photo} />
               <div className="card-text">
                 <h3>{founder.name}</h3>
               </div>
